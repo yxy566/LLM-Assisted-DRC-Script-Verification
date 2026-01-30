@@ -1,0 +1,960 @@
+{
+    "Well.1": {
+        "rule": "Nwell and Pwell must not overlap",
+        "script": "AND nwell pwell",
+        "layers": [
+            "NWELL",
+            "PWELL"
+        ]
+    },
+    "Well.2": {
+        "rule": "Min spacing of pwell to nwell = 0.225",
+        "script": "EXTERNAL nwell pwell < 0.225",
+        "layers": [
+            "NWELL",
+            "PWELL"
+        ]
+    },
+    "Well.4": {
+        "rule": "Min width of well = 0.2",
+        "script": "INTERNAL well < 0.2",
+        "layers": [
+            "WELL"
+        ]
+    },
+    "Poly.1": {
+        "rule": "Min width of poly = 0.05",
+        "script": "INTERNAL poly < 0.05",
+        "layers": [
+            "POLY"
+        ]
+    },
+    "Poly.2": {
+        "rule": "Min spacing of gate poly = 0.14",
+        "script": "EXTERNAL gate < 0.14",
+        "layers": [
+            "POLY",
+            "GATE"
+        ]
+    },
+    "Poly.3": {
+        "rule": "Min extension of poly past active = 0.05",
+        "script": "ENCLOSURE active poly < 0.05",
+        "layers": [
+            "POLY",
+            "ACTIVE"
+        ]
+    },
+    "Poly.4": {
+        "rule": "Minimum active enclosure of gate = 0.07",
+        "script": "ENCLOSURE poly active < 0.07",
+        "layers": [
+            "GATE",
+            "ACTIVE"
+        ]
+    },
+    "Poly.5": {
+        "rule": "Minimum spacing of poly to active = 0.05",
+        "script": "EXTERNAL poly active < 0.05",
+        "layers": [
+            "POLY",
+            "ACTIVE"
+        ]
+    },
+    "Poly.6": {
+        "rule": "Minimum spacing of field poly = 0.075",
+        "script": "EXTERNAL fieldpoly < 0.075",
+        "layers": [
+            "POLY"
+        ]
+    },
+    "Active.1": {
+        "rule": "Minimum width of active = 0.09",
+        "script": "INTERNAL active < 0.09",
+        "layers": [
+            "ACTIVE"
+        ]
+    },
+    "Active.2": {
+        "rule": "Minimum spacing of active areas =  0.08",
+        "script": "EXTERNAL active < 0.08",
+        "layers": [
+            "ACTIVE"
+        ]
+    },
+    "Active.3": {
+        "rule": "Minimum well enclosure of active = 0.055",
+        "script": "ENCLOSURE active well < 0.055",
+        "layers": [
+            "WELL",
+            "ACTIVE"
+        ]
+    },
+    "Active.4": {
+        "rule": "Active must be inside well",
+        "script": "NOT active well",
+        "layers": [
+            "WELL",
+            "ACTIVE"
+        ]
+    },
+    "Implant.1": {
+        "rule": "Minimum spacing of implant to gate = 0.07",
+        "script": "EXTERNAL implant gate < 0.07",
+        "layers": [
+            "IMPLANT",
+            "GATE"
+        ]
+    },
+    "Implant.2": {
+        "rule": "Minimum spacing of implant to contact = 0.025",
+        "script": "EXTERNAL implant contact < 0.025",
+        "layers": [
+            "CONTACT",
+            "IMPLANT"
+        ]
+    },
+    "Implant.3": {
+        "rule": "Minimum spacing of implant = 0.045",
+        "script": "EXTERNAL implant < 0.045",
+        "layers": [
+            "IMPLANT"
+        ]
+    },
+    "Implant.4": {
+        "rule": "Minimum width of implant = 0.045",
+        "script": "INTERNAL implant < 0.045",
+        "layers": [
+            "IMPLANT"
+        ]
+    },
+    "Implant.6": {
+        "rule": "Nimplant and pimplant must not overlap",
+        "script": "AND nimplant pimplant",
+        "layers": [
+            "NIMPLANT",
+            "PIMPLANT"
+        ]
+    },
+    "Contact.1": {
+        "rule": "Minimum width of contact = 0.065",
+        "script": "INTERNAL contact < 0.065",
+        "layers": [
+            "CONTACT"
+        ]
+    },
+    "Contact.2": {
+        "rule": "Minimum spacing of contact = 0.075",
+        "script": "EXTERNAL contact < 0.075",
+        "layers": [
+            "CONTACT"
+        ]
+    },
+    "Contact.3": {
+        "rule": "Contact must be inside metal1 and active or poly",
+        "script": "NOT contact contactenc",
+        "layers": [
+            "CONTACT",
+            "METAL1",
+            "POLY",
+            "ACTIVE"
+        ]
+    },
+    "Contact.4": {
+        "rule": "Minimum active enclosure of contact = 0.005",
+        "script": "ENCLOSURE contact active < 0.005",
+        "layers": [
+            "CONTACT",
+            "ACTIVE"
+        ]
+    },
+    "Contact.5": {
+        "rule": "Minimum poly enclosure of contact = 0.005",
+        "script": "ENCLOSURE contact poly < 0.005",
+        "layers": [
+            "CONTACT",
+            "POLY"
+        ]
+    },
+    "Contact.6": {
+        "rule": "Minimum spacing of contact to poly = 0.035",
+        "script": "EXTERNAL poly contact < 0.035",
+        "layers": [
+            "CONTACT",
+            "POLY"
+        ]
+    },
+    "Metal1.1": {
+        "rule": "Minimum width of metal1 = 0.065",
+        "script": "INTERNAL metal1 < 0.065",
+        "layers": [
+            "METAL1"
+        ]
+    },
+    "Metal1.2": {
+        "rule": "Minimum spacing of metal1 = 0.065",
+        "script": "EXTERNAL metal1 < 0.065",
+        "layers": [
+            "METAL1"
+        ]
+    },
+    "Metal1.3": {
+        "rule": "Metal1 must extend past contact by 0.035 on two opposite sides",
+        "script": "RECTANGLE ENCLOSURE contact metal1 \nGOOD 0.00 0.035 OPPOSITE 0.00 0.035 OPPOSITE",
+        "layers": [
+            "CONTACT",
+            "METAL1"
+        ]
+    },
+    "Metal1.4": {
+        "rule": "Metal1 must extend past via1 by 0.035 on two opposite sides",
+        "script": "RECTANGLE ENCLOSURE via1 metal1 \nGOOD 0.00 0.035 OPPOSITE 0.00 0.035 OPPOSITE",
+        "layers": [
+            "VIA1",
+            "METAL1"
+        ]
+    },
+    "Via1.1": {
+        "rule": "Minimum width of via1 = 0.065",
+        "script": "INTERNAL via1 < 0.065",
+        "layers": [
+            "VIA1"
+        ]
+    },
+    "Via1.2": {
+        "rule": "Minimum spacing of via1 = 0.075",
+        "script": "EXTERNAL via1 < 0.075",
+        "layers": [
+            "VIA1"
+        ]
+    },
+    "Via1.3": {
+        "rule": "Via1 must be inside metal1",
+        "script": "NOT via1 metal1",
+        "layers": [
+            "VIA1",
+            "METAL1"
+        ]
+    },
+    "Via1.4": {
+        "rule": "Via1 must be inside metal2",
+        "script": "NOT via1 metal2",
+        "layers": [
+            "VIA1",
+            "METAL2"
+        ]
+    },
+    "Metal2.1": {
+        "rule": "Minimum width of metal2 = 0.07",
+        "script": "INTERNAL metal2 < 0.07",
+        "layers": [
+            "METAL2"
+        ]
+    },
+    "Metal2.2": {
+        "rule": "Minimum spacing of metal2 = 0.07",
+        "script": "EXTERNAL metal2 < 0.07",
+        "layers": [
+            "METAL2"
+        ]
+    },
+    "Metal2.3": {
+        "rule": "Metal2 must extend past via1 by 0.035 on two opposite sides",
+        "script": "RECTANGLE ENCLOSURE via1 metal2 \nGOOD 0.00 0.035 OPPOSITE 0.00 0.035 OPPOSITE",
+        "layers": [
+            "VIA1",
+            "METAL2"
+        ]
+    },
+    "Metal2.4": {
+        "rule": "Metal2 must extend past via2 by 0.035 on two opposite sides",
+        "script": "RECTANGLE ENCLOSURE via2 metal2 \nGOOD 0.00 0.035 OPPOSITE 0.00 0.035 OPPOSITE",
+        "layers": [
+            "VIA2",
+            "METAL2"
+        ]
+    },
+    "Via2.1": {
+        "rule": "Minimum width of via2 = 0.07",
+        "script": "INTERNAL via2 < 0.065",
+        "layers": [
+            "VIA2"
+        ]
+    },
+    "Via2.2": {
+        "rule": "Minimum spacing of via2 = 0.085",
+        "script": "EXTERNAL via2 < 0.075",
+        "layers": [
+            "VIA2"
+        ]
+    },
+    "Via2.3": {
+        "rule": "Via2 must be inside metal2",
+        "script": "NOT via2 metal2",
+        "layers": [
+            "VIA2",
+            "METAL2"
+        ]
+    },
+    "Via2.4": {
+        "rule": "Via2 must be inside metal3",
+        "script": "NOT via2 metal3",
+        "layers": [
+            "METAL3",
+            "VIA2"
+        ]
+    },
+    "Metal3.1": {
+        "rule": "Minimum width of metal3 = 0.07",
+        "script": "INTERNAL metal3 < 0.07",
+        "layers": [
+            "METAL3"
+        ]
+    },
+    "Metal3.2": {
+        "rule": "Minimum spacing of metal3 = 0.07",
+        "script": "EXTERNAL metal3 < 0.07",
+        "layers": [
+            "METAL3"
+        ]
+    },
+    "Metal3.3": {
+        "rule": "Metal3 must extend past via2 by 0.035 on two opposite sides",
+        "script": "RECTANGLE ENCLOSURE via2 metal3 \nGOOD 0.00 0.035 OPPOSITE 0.00 0.035 OPPOSITE",
+        "layers": [
+            "METAL3",
+            "VIA2"
+        ]
+    },
+    "Metal3.4": {
+        "rule": "Metal3 must extend past via3 by 0.035 on two opposite sides",
+        "script": "RECTANGLE ENCLOSURE via3 metal3 \nGOOD 0.00 0.035 OPPOSITE 0.00 0.035 OPPOSITE",
+        "layers": [
+            "METAL3",
+            "VIA3"
+        ]
+    },
+    "Via3.1": {
+        "rule": "Minimum width of via3 = 0.07",
+        "script": "INTERNAL via3 < 0.065",
+        "layers": [
+            "VIA3"
+        ]
+    },
+    "Via3.2": {
+        "rule": "Minimum spacing of via3 = 0.085",
+        "script": "EXTERNAL via3 < 0.075",
+        "layers": [
+            "VIA3"
+        ]
+    },
+    "Via3.3": {
+        "rule": "Via3 must be inside metal3",
+        "script": "NOT via3 metal3",
+        "layers": [
+            "METAL3",
+            "VIA3"
+        ]
+    },
+    "Via3.4": {
+        "rule": "Via3 must be inside metal4",
+        "script": "NOT via3 metal4",
+        "layers": [
+            "METAL4",
+            "VIA3"
+        ]
+    },
+    "Metal4.1": {
+        "rule": "Minimum width of metal4 = 0.14",
+        "script": "INTERNAL metal4 < 0.14",
+        "layers": [
+            "METAL4"
+        ]
+    },
+    "Metal4.2": {
+        "rule": "Minimum spacing of metal4 = 0.14",
+        "script": "EXTERNAL metal4 < 0.14",
+        "layers": [
+            "METAL4"
+        ]
+    },
+    "Metal4.3": {
+        "rule": "Minimum enclosure of metal4 around via3",
+        "script": "ENCLOSURE metal4 via3 < 0.0025",
+        "layers": [
+            "METAL4",
+            "VIA3"
+        ]
+    },
+    "Via4.1": {
+        "rule": "Minimum width of via4 = 0.14",
+        "script": "INTERNAL via4 < 0.14",
+        "layers": [
+            "VIA4"
+        ]
+    },
+    "Via4.2": {
+        "rule": "Minimum spacing of via4 = 0.16",
+        "script": "EXTERNAL via4 < 0.14",
+        "layers": [
+            "VIA4"
+        ]
+    },
+    "Via4.3": {
+        "rule": "Via4 must be inside metal4",
+        "script": "NOT via4 metal4",
+        "layers": [
+            "METAL4",
+            "VIA4"
+        ]
+    },
+    "Via4.4": {
+        "rule": "Via4 must be inside metal5",
+        "script": "NOT via4 metal5",
+        "layers": [
+            "METAL5",
+            "VIA4"
+        ]
+    },
+    "Metal5.1": {
+        "rule": "Minimum width of metal5 = 0.14",
+        "script": "INTERNAL metal5 < 0.14",
+        "layers": [
+            "METAL5"
+        ]
+    },
+    "Metal5.2": {
+        "rule": "Minimum spacing of metal5 = 0.14",
+        "script": "EXTERNAL metal5 < 0.14",
+        "layers": [
+            "METAL5"
+        ]
+    },
+    "Metal5.3": {
+        "rule": "Minimum enclosure of metal5 around via4",
+        "script": "ENCLOSURE metal5 via4 < 0.0025",
+        "layers": [
+            "METAL5",
+            "VIA4"
+        ]
+    },
+    "Via5.1": {
+        "rule": "Minimum width of via5 = 0.14",
+        "script": "INTERNAL via5 < 0.14",
+        "layers": [
+            "VIA5"
+        ]
+    },
+    "Via5.2": {
+        "rule": "Minimum spacing of via5 = 0.16",
+        "script": "EXTERNAL via5 < 0.14",
+        "layers": [
+            "VIA5"
+        ]
+    },
+    "Via5.3": {
+        "rule": "Via5 must be inside metal5",
+        "script": "NOT via5 metal5",
+        "layers": [
+            "VIA5",
+            "METAL5"
+        ]
+    },
+    "Via5.4": {
+        "rule": "Via5 must be inside metal6",
+        "script": "NOT via5 metal6",
+        "layers": [
+            "VIA5",
+            "METAL6"
+        ]
+    },
+    "Metal6.1": {
+        "rule": "Minimum width of metal6 = 0.14",
+        "script": "INTERNAL metal6 < 0.14",
+        "layers": [
+            "METAL6"
+        ]
+    },
+    "Metal6.2": {
+        "rule": "Minimum spacing of metal6 = 0.14",
+        "script": "EXTERNAL metal6 < 0.14",
+        "layers": [
+            "METAL6"
+        ]
+    },
+    "Metal6.3": {
+        "rule": "Minimum enclosure of metal6 around via5",
+        "script": "ENCLOSURE metal6 via5 < 0.0025",
+        "layers": [
+            "VIA5",
+            "METAL6"
+        ]
+    },
+    "Via6.1": {
+        "rule": "Minimum width of via6 = 0.14",
+        "script": "INTERNAL via6 < 0.14",
+        "layers": [
+            "VIA6"
+        ]
+    },
+    "Via6.2": {
+        "rule": "Minimum spacing of via6 = 0.16",
+        "script": "EXTERNAL via6 < 0.14",
+        "layers": [
+            "VIA6"
+        ]
+    },
+    "Via6.3": {
+        "rule": "Via6 must be inside metal6",
+        "script": "NOT via6 metal6",
+        "layers": [
+            "VIA6",
+            "METAL6"
+        ]
+    },
+    "Via6.4": {
+        "rule": "Via6 must be inside metal7",
+        "script": "NOT via6 metal7",
+        "layers": [
+            "VIA6",
+            "METAL7"
+        ]
+    },
+    "Metal7.1": {
+        "rule": "Minimum width of metal7 = 0.4",
+        "script": "INTERNAL metal7 < 0.4",
+        "layers": [
+            "METAL7"
+        ]
+    },
+    "Metal7.2": {
+        "rule": "Minimum spacing of metal7 = 0.4",
+        "script": "EXTERNAL metal7 < 0.4",
+        "layers": [
+            "METAL7"
+        ]
+    },
+    "Metal7.3": {
+        "rule": "Minimum enclosure of metal7 around via6",
+        "script": "ENCLOSURE metal7 via6 < 0.0025",
+        "layers": [
+            "VIA6",
+            "METAL7"
+        ]
+    },
+    "Via7.1": {
+        "rule": "Minimum width of via7 = 0.4",
+        "script": "INTERNAL via7 < 0.4",
+        "layers": [
+            "VIA7"
+        ]
+    },
+    "Via7.2": {
+        "rule": "Minimum spacing of via7 = 0.44",
+        "script": "EXTERNAL via7 < 0.44",
+        "layers": [
+            "VIA7"
+        ]
+    },
+    "Via7.3": {
+        "rule": "Via7 must be inside metal7",
+        "script": "NOT via7 metal7",
+        "layers": [
+            "VIA7",
+            "METAL7"
+        ]
+    },
+    "Via7.4": {
+        "rule": "Via7 must be inside metal8",
+        "script": "NOT via7 metal8",
+        "layers": [
+            "VIA7",
+            "METAL8"
+        ]
+    },
+    "Metal8.1": {
+        "rule": "Minimum width of metal8 = 0.4",
+        "script": "INTERNAL metal8 < 0.4",
+        "layers": [
+            "METAL8"
+        ]
+    },
+    "Metal8.2": {
+        "rule": "Minimum spacing of metal8 = 0.4",
+        "script": "EXTERNAL metal8 < 0.4",
+        "layers": [
+            "METAL8"
+        ]
+    },
+    "Metal8.3": {
+        "rule": "Minimum enclosure of metal8 around via7",
+        "script": "ENCLOSURE metal8 via7 < 0.0025",
+        "layers": [
+            "VIA7",
+            "METAL8"
+        ]
+    },
+    "Via8.1": {
+        "rule": "Minimum width of via8 = 0.4",
+        "script": "INTERNAL via8 < 0.4",
+        "layers": [
+            "VIA8"
+        ]
+    },
+    "Via8.2": {
+        "rule": "Minimum spacing of via8 = 0.44",
+        "script": "EXTERNAL via8 < 0.44",
+        "layers": [
+            "VIA8"
+        ]
+    },
+    "Via8.3": {
+        "rule": "Via8 must be inside metal8",
+        "script": "NOT via8 metal8",
+        "layers": [
+            "VIA8",
+            "METAL8"
+        ]
+    },
+    "Via8.4": {
+        "rule": "Via8 must be inside metal9",
+        "script": "NOT via8 metal9",
+        "layers": [
+            "VIA8",
+            "METAL9"
+        ]
+    },
+    "Metal9.1": {
+        "rule": "Minimum width of metal9 = 0.8",
+        "script": "INTERNAL metal9 < 0.8",
+        "layers": [
+            "METAL9"
+        ]
+    },
+    "Metal9.2": {
+        "rule": "Minimum spacing of metal9 = 0.8",
+        "script": "EXTERNAL metal9 < 0.8",
+        "layers": [
+            "METAL9"
+        ]
+    },
+    "Metal9.3": {
+        "rule": "Minimum enclosure of metal9 around via8",
+        "script": "ENCLOSURE metal9 via8 < 0.0025",
+        "layers": [
+            "VIA8",
+            "METAL9"
+        ]
+    },
+    "Via9.1": {
+        "rule": "Minimum width of via9 = 0.8",
+        "script": "INTERNAL via9 < 0.8",
+        "layers": [
+            "VIA9"
+        ]
+    },
+    "Via9.2": {
+        "rule": "Minimum spacing of via9 = 0.88",
+        "script": "EXTERNAL via9 < 0.88",
+        "layers": [
+            "VIA9"
+        ]
+    },
+    "Via9.3": {
+        "rule": "Via9 must be inside metal9",
+        "script": "NOT via9 metal9",
+        "layers": [
+            "VIA9",
+            "METAL9"
+        ]
+    },
+    "Via9.4": {
+        "rule": "Via9 must be inside metal10",
+        "script": "NOT via9 metal10",
+        "layers": [
+            "VIA9",
+            "METAL10"
+        ]
+    },
+    "Metal10.1": {
+        "rule": "Minimum width of metal10 = 0.8",
+        "script": "INTERNAL metal10 < 0.8",
+        "layers": [
+            "METAL10"
+        ]
+    },
+    "Metal10.2": {
+        "rule": "Minimum spacing of metal10 = 0.8",
+        "script": "EXTERNAL metal10 < 0.8",
+        "layers": [
+            "METAL10"
+        ]
+    },
+    "Metal10.3": {
+        "rule": "Minimum enclosure of metal10 around via9",
+        "script": "ENCLOSURE metal10 via9 < 0.0025",
+        "layers": [
+            "VIA9",
+            "METAL10"
+        ]
+    },
+    "Metal1.5": {
+        "rule": "Minimum spacing of metal1 wider than 0.09 & longer than 0.3 = 0.09",
+        "script": "EXTERNAL L114 < 0.09",
+        "layers": [
+            "METAL1"
+        ]
+    },
+    "Metal1.6": {
+        "rule": "Minimum spacing of metal1 wider than 0.27 & longer than 0.9 = 0.27",
+        "script": "EXTERNAL L118 < 0.27",
+        "layers": [
+            "METAL1"
+        ]
+    },
+    "Metal1.7": {
+        "rule": "Minimum spacing of metal1 wider than 0.5 & longer than 1.8 = 0.5",
+        "script": "EXTERNAL L122 < 0.5",
+        "layers": [
+            "METAL1"
+        ]
+    },
+    "Metal1.8": {
+        "rule": "Minimum spacing of metal1 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L126 < 0.9",
+        "layers": [
+            "METAL1"
+        ]
+    },
+    "Metal1.9": {
+        "rule": "Minimum spacing of metal1 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L130 < 1.5",
+        "layers": [
+            "METAL1"
+        ]
+    },
+    "Metal2.5": {
+        "rule": "Minimum spacing of metal2 wider than 0.09 & longer than 0.3 = 0.09",
+        "script": "EXTERNAL L214 < 0.09",
+        "layers": [
+            "METAL2"
+        ]
+    },
+    "Metal2.6": {
+        "rule": "Minimum spacing of metal2 wider than 0.27 & longer than 0.9 = 0.27",
+        "script": "EXTERNAL L218 < 0.27",
+        "layers": [
+            "METAL2"
+        ]
+    },
+    "Metal2.7": {
+        "rule": "Minimum spacing of metal2 wider than 0.5 & longer than 1.8 = 0.5",
+        "script": "EXTERNAL L222 < 0.5",
+        "layers": [
+            "METAL2"
+        ]
+    },
+    "Metal2.8": {
+        "rule": "Minimum spacing of metal2 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L226 < 0.9",
+        "layers": [
+            "METAL2"
+        ]
+    },
+    "Metal2.9": {
+        "rule": "Minimum spacing of metal2 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L230 < 1.5",
+        "layers": [
+            "METAL2"
+        ]
+    },
+    "Metal3.5": {
+        "rule": "Minimum spacing of metal3 wider than 0.09 & longer than 0.3 = 0.09",
+        "script": "EXTERNAL L314 < 0.09",
+        "layers": [
+            "METAL3"
+        ]
+    },
+    "Metal3.6": {
+        "rule": "Minimum spacing of metal3 wider than 0.27 & longer than 0.9 = 0.27",
+        "script": "EXTERNAL L318 < 0.27",
+        "layers": [
+            "METAL3"
+        ]
+    },
+    "Metal3.7": {
+        "rule": "Minimum spacing of metal3 wider than 0.5 & longer than 1.8 = 0.5",
+        "script": "EXTERNAL L322 < 0.5",
+        "layers": [
+            "METAL3"
+        ]
+    },
+    "Metal3.8": {
+        "rule": "Minimum spacing of metal3 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L326 < 0.9",
+        "layers": [
+            "METAL3"
+        ]
+    },
+    "Metal3.9": {
+        "rule": "Minimum spacing of metal3 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L330 < 1.5",
+        "layers": [
+            "METAL3"
+        ]
+    },
+    "Metal4.5": {
+        "rule": "Minimum spacing of metal4 wider than 0.27 & longer than 0.9 = 0.27",
+        "script": "EXTERNAL L418 < 0.27",
+        "layers": [
+            "METAL4"
+        ]
+    },
+    "Metal4.6": {
+        "rule": "Minimum spacing of metal4 wider than 0.5 & longer than 1.8 = 0.5",
+        "script": "EXTERNAL L422 < 0.5",
+        "layers": [
+            "METAL4"
+        ]
+    },
+    "Metal4.7": {
+        "rule": "Minimum spacing of metal4 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L426 < 0.9",
+        "layers": [
+            "METAL4"
+        ]
+    },
+    "Metal4.8": {
+        "rule": "Minimum spacing of metal4 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L430 < 1.5",
+        "layers": [
+            "METAL4"
+        ]
+    },
+    "Metal5.5": {
+        "rule": "Minimum spacing of metal5 wider than 0.27 & longer than 0.9 = 0.27",
+        "script": "EXTERNAL L518 < 0.27",
+        "layers": [
+            "METAL5"
+        ]
+    },
+    "Metal5.6": {
+        "rule": "Minimum spacing of metal5 wider than 0.5 & longer than 1.8 = 0.5",
+        "script": "EXTERNAL L522 < 0.5",
+        "layers": [
+            "METAL5"
+        ]
+    },
+    "Metal5.7": {
+        "rule": "Minimum spacing of metal5 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L526 < 0.9",
+        "layers": [
+            "METAL5"
+        ]
+    },
+    "Metal5.8": {
+        "rule": "Minimum spacing of metal5 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L530 < 1.5",
+        "layers": [
+            "METAL5"
+        ]
+    },
+    "Metal6.5": {
+        "rule": "Minimum spacing of metal6 wider than 0.27 & longer than 0.9 = 0.27",
+        "script": "EXTERNAL L618 < 0.27",
+        "layers": [
+            "METAL6"
+        ]
+    },
+    "Metal6.6": {
+        "rule": "Minimum spacing of metal6 wider than 0.5 & longer than 1.8 = 0.5",
+        "script": "EXTERNAL L622 < 0.5",
+        "layers": [
+            "METAL6"
+        ]
+    },
+    "Metal6.7": {
+        "rule": "Minimum spacing of metal6 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L626 < 0.9",
+        "layers": [
+            "METAL6"
+        ]
+    },
+    "Metal6.8": {
+        "rule": "Minimum spacing of metal6 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L630 < 1.5",
+        "layers": [
+            "METAL6"
+        ]
+    },
+    "Metal7.5": {
+        "rule": "Minimum spacing of metal7 wider than 0.5 & longer than 1.8 = 0.5",
+        "script": "EXTERNAL L722 < 0.5",
+        "layers": [
+            "METAL7"
+        ]
+    },
+    "Metal7.6": {
+        "rule": "Minimum spacing of metal7 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L726 < 0.9",
+        "layers": [
+            "METAL7"
+        ]
+    },
+    "Metal7.7": {
+        "rule": "Minimum spacing of metal7 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L730 < 1.5",
+        "layers": [
+            "METAL7"
+        ]
+    },
+    "Metal8.5": {
+        "rule": "Minimum spacing of metal8 wider than 0.5 & longer than 1.8 = 0.5",
+        "script": "EXTERNAL L822 < 0.5",
+        "layers": [
+            "METAL8"
+        ]
+    },
+    "Metal8.6": {
+        "rule": "Minimum spacing of metal8 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L826 < 0.9",
+        "layers": [
+            "METAL8"
+        ]
+    },
+    "Metal8.7": {
+        "rule": "Minimum spacing of metal8 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L830 < 1.5",
+        "layers": [
+            "METAL8"
+        ]
+    },
+    "Metal9.5": {
+        "rule": "Minimum spacing of metal9 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L926 < 0.9",
+        "layers": [
+            "METAL9"
+        ]
+    },
+    "Metal9.6": {
+        "rule": "Minimum spacing of metal9 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L930 < 1.5",
+        "layers": [
+            "METAL9"
+        ]
+    },
+    "Metal10.5": {
+        "rule": "Minimum spacing of metal10 wider than 0.9 & longer than 2.7 = 0.9",
+        "script": "EXTERNAL L1026 < 0.9",
+        "layers": [
+            "METAL10"
+        ]
+    },
+    "Metal10.6": {
+        "rule": "Minimum spacing of metal10 wider than 1.5 & longer than 4.0 = 1.5",
+        "script": "EXTERNAL L1030 < 1.5",
+        "layers": [
+            "METAL10"
+        ]
+    }
+}

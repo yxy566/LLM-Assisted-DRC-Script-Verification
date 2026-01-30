@@ -1,0 +1,752 @@
+{
+    "NW": {
+        "constraints": [
+            "set_min_width(160) \t set_min_height(160)",
+            "(self.height * self.width) >= 0.140*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_NW003",
+            "RULE_NW004A"
+        ],
+        "rules": [
+            "Minimum width of NW is 160nm",
+            "Minimum area of NW is 0.140 um2"
+        ]
+    },
+    "ACT": {
+        "constraints": [
+            "set_min_height(48)",
+            "((self.height - self.min_height) % 40) == 0",
+            "set_min_width(96)",
+            "(self.height * self.width) >= 0.004608*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_ACT001",
+            "RULE_ACT002",
+            "RULE_ACT004",
+            "RULE_ACT008A"
+        ],
+        "rules": [
+            "Minimum vertical width of ACT layer is 48nm",
+            "Minimum Incremental vertical width of ACT layer is 40nm",
+            "Minimum horizontal width of ACT is 96nm",
+            "Minimum area of ACT is 0.004608 um2"
+        ]
+    },
+    "GATEA": {
+        "constraints": [
+            "Or(self.width == 20, self.width == 16, self.width == 14)",
+            "self.height >= 200"
+        ],
+        "rule_name": [
+            "RULE_GATE001A",
+            "RULE_GATE007A"
+        ],
+        "rules": [
+            "Exact horizontal width of GATE [A] is 20, 16 or 14 nm",
+            "Minimum length of Gate A (vertical edge, gate C ignored) 200nm"
+        ]
+    },
+    "GATEB": {
+        "constraints": [
+            "Or(self.width == 14, self.width == 16, self.width == 20)",
+            "self.height >= 200"
+        ],
+        "rule_name": [
+            "RULE_GATE001B",
+            "RULE_GATE007B"
+        ],
+        "rules": [
+            "Exact horizontal width of GATE [B] is 20, 16 or 14 nm",
+            "Minimum length of Gate B (vertical edge, gate C ignored) 200nm"
+        ]
+    },
+    "GATEAB": {
+        "constraints": [
+            "Or(self.width == 20, self.width == 16, self.width == 14)",
+            "self.height>=200"
+        ],
+        "rule_name": [
+            "RULE_GATE001AB",
+            "RULE_GATE007AB"
+        ],
+        "rules": [
+            "Exact horizontal width of GATE [AB] is 20, 16 or 14 nm",
+            "Minimum length of Gate AB (vertical edge, gate C ignored) 200nm"
+        ]
+    },
+    "GATEC": {
+        "constraints": [
+            "Implies(self.width > self.height, self.height == 32)",
+            "Implies(self.width > self.height, self.width >= 128)"
+        ],
+        "rule_name": [
+            "RULE_GATE001Ca",
+            "RULE_GATE002Ca"
+        ],
+        "rules": [
+            "Exact vertical width of GATEC is 32nm (1 is arbitrary large value) shape is oriented horizonally",
+            "Minimum horizontal length of GATEC is 128nm shape is oriented horizonatally"
+        ]
+    },
+    "NIM": {
+        "constraints": [
+            "set_min_width(128) \t set_min_height(128)",
+            "(self.height * self.width) >= 0.049*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_NIM001A",
+            "RULE_NIM007A"
+        ],
+        "rules": [
+            "Minimum width of NIM is 128nm",
+            "Minimum area of NIM is 0.049 um2"
+        ]
+    },
+    "PIM": {
+        "constraints": [
+            "set_min_width(128) \t set_min_height(128)",
+            "(self.height * self.width) >= 49000"
+        ],
+        "rule_name": [
+            "RULE_PIM001A",
+            "RULE_PIM007A"
+        ],
+        "rules": [
+            "Minimum width of PIM is 128nm",
+            "Minimum area of PIM is 0.049 um2"
+        ]
+    },
+    "AIL1": {
+        "constraints": [
+            "self.width == 28",
+            "set_min_height(58)"
+        ],
+        "rule_name": [
+            "RULE_AIL1001",
+            "RULE_AIL1005"
+        ],
+        "rules": [
+            "Horizontal Width of AIL1 is 28nm",
+            "Minimum Vertical length of AIL1 is 58nm"
+        ]
+    },
+    "AIL2": {
+        "constraints": [
+            "self.width == 24",
+            "self.height == 68"
+        ],
+        "rule_name": [
+            "RULE_AIL2001",
+            "RULE_AIL2006"
+        ],
+        "rules": [
+            "Horizontal width of AIL2 is 24nm",
+            "Vertical length of AIL2 is 68nm"
+        ]
+    },
+    "GIL": {
+        "constraints": [
+            "set_min_height(44)",
+            "self.width >= 56"
+        ],
+        "rule_name": [
+            "RULE_GIL001",
+            "RULE_GIL002"
+        ],
+        "rules": [
+            "Minimum vertical width of GIL is 44nm",
+            "Minimum horizontal length of GIL is 56nm"
+        ]
+    },
+    "V0": {
+        "constraints": [
+            "And(self.width == 28, self.height == 28)"
+        ],
+        "rule_name": [
+            "RULE_V0001a"
+        ],
+        "rules": [
+            "V0 is a square with 28nm edge length"
+        ]
+    },
+    "M1A": {
+        "constraints": [
+            "self.width >= 28",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_M1001A",
+            "RULE_M1003A",
+            "RULE_M1027A"
+        ],
+        "rules": [
+            "M1A width 28nm, 32nm, 40nm, 2.4um (10um is arbitrary)",
+            "maximum length of M1A for wires with min width 28nm is 1.8um",
+            "M1A minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "M1B": {
+        "constraints": [
+            "self.width >= 28",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_M1001B",
+            "RULE_M1003B",
+            "RULE_M1027B"
+        ],
+        "rules": [
+            "M1B width 28nm, 32nm, 40nm, 2.4um (10um is arbitrary)",
+            "maximum length of M1B for wires with min width 28nm is 1.8um",
+            "M1B minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "M1": {
+        "constraints": [
+            "set_min_width(28)\tset_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_M1001",
+            "RULE_M1003",
+            "RULE_M1027"
+        ],
+        "rules": [
+            "M1 minimum width 28nm",
+            "maximum length of M1 for wires with min width 28nm is 1.8um",
+            "M1 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "V1": {
+        "constraints": [
+            "And(self.width == 28, self.height == 28)"
+        ],
+        "rule_name": [
+            "RULE_V1001a"
+        ],
+        "rules": [
+            "V1 is a square with 28nm edge length"
+        ]
+    },
+    "VINT1": {
+        "constraints": [
+            "And(self.width == 28, self.height == 28)"
+        ],
+        "rule_name": [
+            "RULE_VINT1001a"
+        ],
+        "rules": [
+            "VINT1 is a square with 28nm edge length"
+        ]
+    },
+    "VINT2": {
+        "constraints": [
+            "And(self.width == 28, self.height == 28)"
+        ],
+        "rule_name": [
+            "RULE_VINT2001a"
+        ],
+        "rules": [
+            "VINT2 is a square with 28nm edge length"
+        ]
+    },
+    "VINT3": {
+        "constraints": [
+            "And(self.width == 28, self.height == 28)"
+        ],
+        "rule_name": [
+            "RULE_VINT3001a"
+        ],
+        "rules": [
+            "VINT3 is a square with 28nm edge length"
+        ]
+    },
+    "VINT4": {
+        "constraints": [
+            "And(self.width == 28, self.height == 28)"
+        ],
+        "rule_name": [
+            "RULE_VINT4001a"
+        ],
+        "rules": [
+            "VINT4 is a square with 28nm edge length"
+        ]
+    },
+    "VINT5": {
+        "constraints": [
+            "And(self.width == 28, self.height == 28)"
+        ],
+        "rule_name": [
+            "RULE_VINT5001a"
+        ],
+        "rules": [
+            "VINT5 is a square with 28nm edge length"
+        ]
+    },
+    "MINT1A": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT1001A",
+            "RULE_MINT1003A",
+            "RULE_MINT1027A"
+        ],
+        "rules": [
+            "MINT1A width > 28nm",
+            "maximum length of MINT1A for wires with min width 28nm is 1.8um",
+            "MINT1A minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT1B": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT1001B",
+            "RULE_MINT1003B",
+            "RULE_MINT1027B"
+        ],
+        "rules": [
+            "MINT1B width > 28nm",
+            "maximum length of MINT1B for wires with min width 28nm is 1.8um",
+            "MINT1B minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT1": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT1001",
+            "RULE_MINT1003",
+            "RULE_MINT1027"
+        ],
+        "rules": [
+            "MINT1 width > 28nm",
+            "maximum length of MINT1 for wires with min width 28nm is 1.8um",
+            "MINT1 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT2A": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT2001A",
+            "RULE_MINT2003A",
+            "RULE_MINT2027A"
+        ],
+        "rules": [
+            "MINT2A width > 28nm",
+            "maximum length of MINT2A for wires with min width 28nm is 1.8um",
+            "MINT2A minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT2B": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT2001B",
+            "RULE_MINT2003B",
+            "RULE_MINT2027B"
+        ],
+        "rules": [
+            "MINT2B width > 28nm",
+            "maximum length of MINT2B for wires with min width 28nm is 1.8um",
+            "MINT2B minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT2": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT2001",
+            "RULE_MINT2003",
+            "RULE_MINT2027"
+        ],
+        "rules": [
+            "MINT2 width > 28nm",
+            "maximum length of MINT2 for wires with min width 28nm is 1.8um",
+            "MINT2 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT3A": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT3001A",
+            "RULE_MINT3003A",
+            "RULE_MINT3027A"
+        ],
+        "rules": [
+            "MINT3A width > 28nm",
+            "maximum length of MINT3A for wires with min width 28nm is 1.8um",
+            "MINT3A minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT3B": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT3001B",
+            "RULE_MINT3003B",
+            "RULE_MINT3027B"
+        ],
+        "rules": [
+            "MINT3B width > 28nm",
+            "maximum length of MINT3B for wires with min width 28nm is 1.8um",
+            "MINT3B minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT3": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT3001",
+            "RULE_MINT3003",
+            "RULE_MINT3027"
+        ],
+        "rules": [
+            "MINT3 width > 28nm",
+            "maximum length of MINT3 for wires with min width 28nm is 1.8um",
+            "MINT3 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT4A": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT4001A",
+            "RULE_MINT4003A",
+            "RULE_MINT4027A"
+        ],
+        "rules": [
+            "MINT4A width > 28nm",
+            "maximum length of MINT4A for wires with min width 28nm is 1.8um",
+            "MINT4A minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT4B": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT4001B",
+            "RULE_MINT4003B",
+            "RULE_MINT4027B"
+        ],
+        "rules": [
+            "MINT4B width > 28nm",
+            "maximum length of MINT4B for wires with min width 28nm is 1.8um",
+            "MINT4B minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT4": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT4001",
+            "RULE_MINT4003",
+            "RULE_MINT4027"
+        ],
+        "rules": [
+            "MINT4 width > 28nm",
+            "maximum length of MINT4 for wires with min width 28nm is 1.8um",
+            "MINT4 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT5A": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT5001A",
+            "RULE_MINT5003A",
+            "RULE_MINT5027A"
+        ],
+        "rules": [
+            "MINT5A width > 28nm",
+            "maximum length of MINT5A for wires with min width 28nm is 1.8um",
+            "MINT5A minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT5B": {
+        "constraints": [
+            "set_min_width(28) \t set_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT5001B",
+            "RULE_MINT5003B",
+            "RULE_MINT5027B"
+        ],
+        "rules": [
+            "MINT5B width > 28nm",
+            "maximum length of MINT5B for wires with min width 28nm is 1.8um",
+            "MINT5B minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MINT5": {
+        "constraints": [
+            "set_min_width(28)\tset_min_height(28)",
+            "Implies(self.width == 28, self.height <= 1800)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MINT5001",
+            "RULE_MINT5003",
+            "RULE_MINT5027"
+        ],
+        "rules": [
+            "MINT5 width > 28nm",
+            "maximum length of MINT5 for wires with min width 28nm is 1.8um",
+            "MINT5 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "VSMG1": {
+        "constraints": [
+            "And(self.width == 56, self.height == 56)"
+        ],
+        "rule_name": [
+            "RULE_VSMG1001a"
+        ],
+        "rules": [
+            "VSMG1 is a square with 56nm edge length"
+        ]
+    },
+    "VSMG2": {
+        "constraints": [
+            "And(self.width == 56, self.height == 56)"
+        ],
+        "rule_name": [
+            "RULE_VSMG2001a"
+        ],
+        "rules": [
+            "VSMG2 is a square with 56nm edge length"
+        ]
+    },
+    "VSMG3": {
+        "constraints": [
+            "And(self.width == 56, self.height == 56)"
+        ],
+        "rule_name": [
+            "RULE_VSMG3001a"
+        ],
+        "rules": [
+            "VSMG3 is a square with 56nm edge length"
+        ]
+    },
+    "VSMG4": {
+        "constraints": [
+            "And(self.height == 56, self.width == 56)"
+        ],
+        "rule_name": [
+            "RULE_VSMG4001a"
+        ],
+        "rules": [
+            "VSMG4 is a square with 56nm edge length"
+        ]
+    },
+    "VSMG5": {
+        "constraints": [
+            "And(self.width == 56, self.height == 56)"
+        ],
+        "rule_name": [
+            "RULE_VSMG5001a"
+        ],
+        "rules": [
+            "VSMG5 is a square with 56nm edge length"
+        ]
+    },
+    "MSMG1": {
+        "constraints": [
+            "set_min_width(56) \t set_min_height(56)",
+            "Implies(self.width == 56, self.height <= 1920)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MSMG1001",
+            "RULE_MSMG1003",
+            "RULE_MSMG1014"
+        ],
+        "rules": [
+            "MSMG1 width > 56nm",
+            "maximum length of MSMG1 for wires with min width 56nm is 1.92um",
+            "MSMG1 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MSMG2": {
+        "constraints": [
+            "set_min_width(56) \t set_min_height(56)",
+            "Implies(self.width == 56, self.height <= 1920)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MSMG2001",
+            "RULE_MSMG2003",
+            "RULE_MSMG2014"
+        ],
+        "rules": [
+            "MSMG2 width > 56nm",
+            "maximum length of MSMG2 for wires with min width 56nm is 1.92um",
+            "MSMG2 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MSMG3": {
+        "constraints": [
+            "set_min_width(56) \t set_min_height(56)",
+            "Implies(self.width == 56, self.height <= 1920)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MSMG3001",
+            "RULE_MSMG3003",
+            "RULE_MSMG3014"
+        ],
+        "rules": [
+            "MSMG3 width > 56nm",
+            "maximum length of MSMG3 for wires with min width 56nm is 1.92um",
+            "MSMG3 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MSMG4": {
+        "constraints": [
+            "set_min_width(56) \t set_min_height(56)",
+            "Implies(self.width == 56, self.height <= 1920)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MSMG4001",
+            "RULE_MSMG4003",
+            "RULE_MSMG4014"
+        ],
+        "rules": [
+            "MSMG4 width > 56nm",
+            "maximum length of MSMG4 for wires with min width 56nm is 1.92um",
+            "MSMG4 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MSMG5": {
+        "constraints": [
+            "set_min_width(56) \t set_min_height(56)",
+            "Implies(self.width == 56, self.height <= 1920)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MSMG5001",
+            "RULE_MSMG5003",
+            "RULE_MSMG5014"
+        ],
+        "rules": [
+            "MSMG5 width > 56nm",
+            "maximum length of MSMG5 for wires with min width 56nm is 1.92um",
+            "MSMG5 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "VG1": {
+        "constraints": [
+            "And(self.width == 112, self.height == 112)"
+        ],
+        "rule_name": [
+            "RULE_VG1001a"
+        ],
+        "rules": [
+            "VG1 is a square with 112nm edge length"
+        ]
+    },
+    "MG1": {
+        "constraints": [
+            "set_min_width(112) \t set_min_height(112)",
+            "Implies(self.width == 112, self.height <= 3840)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MG1001",
+            "RULE_MG1003",
+            "RULE_MG1013"
+        ],
+        "rules": [
+            "MG1 width > 112nm",
+            "maximum length of MG1 for wires with min width 112nm is 3.84um",
+            "MG1 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "MG2": {
+        "constraints": [
+            "set_min_width(112) \t set_min_height(112)",
+            "Implies(self.width == 112, self.height <= 3840)",
+            "(self.height * self.width) >= 0.0024*(10**6)"
+        ],
+        "rule_name": [
+            "RULE_MG2001",
+            "RULE_MG2003",
+            "RULE_MG2013"
+        ],
+        "rules": [
+            "MG2 width > 112nm",
+            "maximum length of MG2 for wires with min width 112nm is 3.84um",
+            "MG2 minimum area for rectangular shape is 0.0024um2"
+        ]
+    },
+    "VTL":{
+        "constraints": [
+            "set_min_width(114) \t set_min_height(114)"
+        ],
+        "rule_name": [
+            "RULE_VT001"
+        ],
+        "rules": [
+            "Minimum width of VTL/VTH/(not (VTL or VTH)) is 144nm"
+        ]
+    },
+    "VTH":{
+        "constraints": [
+            "set_min_width(114) \t set_min_height(114)"
+        ],
+        "rule_name": [
+            "RULE_VT001"
+        ],
+        "rules": [
+            "Minimum width of VTL/VTH/(not (VTL or VTH)) is 144nm"
+        ]
+    }
+}

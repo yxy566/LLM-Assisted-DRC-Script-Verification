@@ -1,0 +1,5591 @@
+{
+    "RULE_NW003": {
+        "examples": [
+            {
+                "NW": [
+                    {
+                        "llx": 0,
+                        "lly": 1874,
+                        "urx": 160,
+                        "ury": 2034
+                    }
+                ]
+            },
+            {
+                "NW": [
+                    {
+                        "llx": 0,
+                        "lly": 1701,
+                        "urx": 159,
+                        "ury": 1861
+                    }
+                ]
+            },
+            {
+                "NW": [
+                    {
+                        "llx": 0,
+                        "lly": 2036,
+                        "urx": 160,
+                        "ury": 2195
+                    }
+                ]
+            },
+            {
+                "NW": [
+                    {
+                        "llx": 0,
+                        "lly": 2075,
+                        "urx": 159,
+                        "ury": 2234
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_NW004A": {
+        "examples": [
+            {
+                "NW": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 160,
+                        "ury": 875
+                    }
+                ]
+            },
+            {
+                "NW": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 160,
+                        "ury": 160
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_ACT001": {
+        "examples": [
+            {
+                "ACT": [
+                    {
+                        "llx": 0,
+                        "lly": 2766,
+                        "urx": 5,
+                        "ury": 2814
+                    }
+                ]
+            },
+            {
+                "ACT": [
+                    {
+                        "llx": 0,
+                        "lly": 1889,
+                        "urx": 5,
+                        "ury": 1936
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_ACT002": {
+        "examples": [
+            {
+                "ACT": [
+                    {
+                        "llx": 0,
+                        "lly": 2437,
+                        "urx": 5,
+                        "ury": 2485
+                    }
+                ]
+            },
+            {
+                "ACT": [
+                    {
+                        "llx": 0,
+                        "lly": 3413,
+                        "urx": 5,
+                        "ury": 3462
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_ACT004": {
+        "examples": [
+            {
+                "ACT": [
+                    {
+                        "llx": 0,
+                        "lly": 2437,
+                        "urx": 96,
+                        "ury": 2485
+                    }
+                ]
+            },
+            {
+                "ACT": [
+                    {
+                        "llx": 0,
+                        "lly": 2567,
+                        "urx": 95,
+                        "ury": 2615
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_ACT008A": {
+        "examples": [
+            {
+                "ACT": [
+                    {
+                        "llx": 3,
+                        "lly": 0,
+                        "urx": 99,
+                        "ury": 48
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true
+        ]
+    },
+    "RULE_GATE001A": {
+        "examples": [
+            {
+                "GATEA": [
+                    {
+                        "llx": 2738,
+                        "lly": 0,
+                        "urx": 2758,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "GATEA": [
+                    {
+                        "llx": 0,
+                        "lly": 1253,
+                        "urx": 21,
+                        "ury": 1258
+                    }
+                ]
+            },
+            {
+                "GATEA": [
+                    {
+                        "llx": 1290,
+                        "lly": 0,
+                        "urx": 1304,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "GATEA": [
+                    {
+                        "llx": 1298,
+                        "lly": 0,
+                        "urx": 1314,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "GATEA": [
+                    {
+                        "llx": 0,
+                        "lly": 281,
+                        "urx": 19,
+                        "ury": 286
+                    }
+                ]
+            },
+            {
+                "GATEA": [
+                    {
+                        "llx": 0,
+                        "lly": 3859,
+                        "urx": 15,
+                        "ury": 3864
+                    }
+                ]
+            },
+            {
+                "GATEA": [
+                    {
+                        "llx": 0,
+                        "lly": 3369,
+                        "urx": 13,
+                        "ury": 3374
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_GATE007A": {
+        "examples": [
+            {
+                "GATEA": [
+                    {
+                        "llx": 0,
+                        "lly": 2437,
+                        "urx": 14,
+                        "ury": 2637
+                    }
+                ]
+            },
+            {
+                "GATEA": [
+                    {
+                        "llx": 0,
+                        "lly": 4090,
+                        "urx": 14,
+                        "ury": 4289
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_GATE001B": {
+        "examples": [
+            {
+                "GATEB": [
+                    {
+                        "llx": 1290,
+                        "lly": 0,
+                        "urx": 1304,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "GATEB": [
+                    {
+                        "llx": 1314,
+                        "lly": 0,
+                        "urx": 1334,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "GATEB": [
+                    {
+                        "llx": 0,
+                        "lly": 1805,
+                        "urx": 21,
+                        "ury": 1810
+                    }
+                ]
+            },
+            {
+                "GATEB": [
+                    {
+                        "llx": 1298,
+                        "lly": 0,
+                        "urx": 1314,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "GATEB": [
+                    {
+                        "llx": 0,
+                        "lly": 1805,
+                        "urx": 17,
+                        "ury": 1810
+                    }
+                ]
+            },
+            {
+                "GATEB": [
+                    {
+                        "llx": 0,
+                        "lly": 3859,
+                        "urx": 15,
+                        "ury": 3864
+                    }
+                ]
+            },
+            {
+                "GATEB": [
+                    {
+                        "llx": 0,
+                        "lly": 3369,
+                        "urx": 13,
+                        "ury": 3374
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_GATE007B": {
+        "examples": [
+            {
+                "GATEB": [
+                    {
+                        "llx": 0,
+                        "lly": 4054,
+                        "urx": 14,
+                        "ury": 4254
+                    }
+                ]
+            },
+            {
+                "GATEB": [
+                    {
+                        "llx": 0,
+                        "lly": 1051,
+                        "urx": 14,
+                        "ury": 1250
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_GATE001AB": {
+        "examples": [
+            {
+                "GATEAB": [
+                    {
+                        "llx": 1290,
+                        "lly": 0,
+                        "urx": 1304,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "GATEAB": [
+                    {
+                        "llx": 1298,
+                        "lly": 0,
+                        "urx": 1314,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "GATEAB": [
+                    {
+                        "llx": 1314,
+                        "lly": 0,
+                        "urx": 1334,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "GATEAB": [
+                    {
+                        "llx": 0,
+                        "lly": 1253,
+                        "urx": 21,
+                        "ury": 1258
+                    }
+                ]
+            },
+            {
+                "GATEAB": [
+                    {
+                        "llx": 0,
+                        "lly": 1805,
+                        "urx": 17,
+                        "ury": 1810
+                    }
+                ]
+            },
+            {
+                "GATEAB": [
+                    {
+                        "llx": 0,
+                        "lly": 1805,
+                        "urx": 15,
+                        "ury": 1810
+                    }
+                ]
+            },
+            {
+                "GATEAB": [
+                    {
+                        "llx": 0,
+                        "lly": 3369,
+                        "urx": 13,
+                        "ury": 3374
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_GATE007AB": {
+        "examples": [
+            {
+                "GATEAB": [
+                    {
+                        "llx": 0,
+                        "lly": 2437,
+                        "urx": 14,
+                        "ury": 2637
+                    }
+                ]
+            },
+            {
+                "GATEAB": [
+                    {
+                        "llx": 0,
+                        "lly": 4090,
+                        "urx": 14,
+                        "ury": 4289
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_GATE001Ca": {
+        "examples": [
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 1859,
+                        "urx": 33,
+                        "ury": 1891
+                    }
+                ]
+            },
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 1861,
+                        "urx": 34,
+                        "ury": 1894
+                    }
+                ]
+            },
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 1056,
+                        "urx": 32,
+                        "ury": 1087
+                    }
+                ]
+            },
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 867,
+                        "urx": 32,
+                        "ury": 899
+                    }
+                ]
+            },
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 1883,
+                        "urx": 33,
+                        "ury": 1916
+                    }
+                ]
+            },
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 2458,
+                        "urx": 31,
+                        "ury": 2489
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+        ]
+    },
+    "RULE_GATE002Ca": {
+        "examples": [
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 1859,
+                        "urx": 128,
+                        "ury": 1891
+                    }
+                ]
+            },
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 1859,
+                        "urx": 33,
+                        "ury": 1891
+                    }
+                ]
+            },
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 2846,
+                        "urx": 128,
+                        "ury": 2974
+                    }
+                ]
+            },
+            {
+                "GATEC": [
+                    {
+                        "llx": 0,
+                        "lly": 1536,
+                        "urx": 127,
+                        "ury": 1663
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_NIM001A": {
+        "examples": [
+            {
+                "NIM": [
+                    {
+                        "llx": 0,
+                        "lly": 2846,
+                        "urx": 128,
+                        "ury": 2974
+                    }
+                ]
+            },
+            {
+                "NIM": [
+                    {
+                        "llx": 0,
+                        "lly": 1541,
+                        "urx": 127,
+                        "ury": 1669
+                    }
+                ]
+            },
+            {
+                "NIM": [
+                    {
+                        "llx": 0,
+                        "lly": 2004,
+                        "urx": 128,
+                        "ury": 2131
+                    }
+                ]
+            },
+            {
+                "NIM": [
+                    {
+                        "llx": 0,
+                        "lly": 1299,
+                        "urx": 127,
+                        "ury": 1426
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_NIM007A": {
+        "examples": [
+            {
+                "NIM": [
+                    {
+                        "llx": 343,
+                        "lly": 343,
+                        "urx": 693,
+                        "ury": 483
+                    }
+                ]
+            },
+            {
+                "NIM": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 128,
+                        "ury": 128
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_PIM001A": {
+        "examples": [
+            {
+                "PIM": [
+                    {
+                        "llx": 0,
+                        "lly": 2846,
+                        "urx": 128,
+                        "ury": 2974
+                    }
+                ]
+            },
+            {
+                "PIM": [
+                    {
+                        "llx": 0,
+                        "lly": 1541,
+                        "urx": 127,
+                        "ury": 1669
+                    }
+                ]
+            },
+            {
+                "PIM": [
+                    {
+                        "llx": 0,
+                        "lly": 2004,
+                        "urx": 128,
+                        "ury": 2131
+                    }
+                ]
+            },
+            {
+                "PIM": [
+                    {
+                        "llx": 0,
+                        "lly": 1299,
+                        "urx": 127,
+                        "ury": 1426
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_PIM007A": {
+        "examples": [
+            {
+                "PIM": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 140,
+                        "ury": 350
+                    }
+                ]
+            },
+            {
+                "PIM": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 128,
+                        "ury": 128
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_AIL1001": {
+        "examples": [
+            {
+                "AIL1": [
+                    {
+                        "llx": 2746,
+                        "lly": 0,
+                        "urx": 2774,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "AIL1": [
+                    {
+                        "llx": 0,
+                        "lly": 1805,
+                        "urx": 29,
+                        "ury": 1810
+                    }
+                ]
+            },
+            {
+                "AIL1": [
+                    {
+                        "llx": 0,
+                        "lly": 3369,
+                        "urx": 27,
+                        "ury": 3374
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false
+        ]
+    },
+    "RULE_AIL1005": {
+        "examples": [
+            {
+                "AIL1": [
+                    {
+                        "llx": 2746,
+                        "lly": 0,
+                        "urx": 2774,
+                        "ury": 58
+                    }
+                ]
+            },
+            {
+                "AIL1": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 57
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_AIL2001": {
+        "examples": [
+            {
+                "AIL2": [
+                    {
+                        "llx": 1330,
+                        "lly": 0,
+                        "urx": 1354,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "AIL2": [
+                    {
+                        "llx": 0,
+                        "lly": 3859,
+                        "urx": 25,
+                        "ury": 3864
+                    }
+                ]
+            },
+            {
+                "AIL2": [
+                    {
+                        "llx": 0,
+                        "lly": 1805,
+                        "urx": 23,
+                        "ury": 1810
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false
+        ]
+    },
+    "RULE_AIL2006": {
+        "examples": [
+            {
+                "AIL2": [
+                    {
+                        "llx": 0,
+                        "lly": 1506,
+                        "urx": 24,
+                        "ury": 1574
+                    }
+                ]
+            },
+            {
+                "AIL2": [
+                    {
+                        "llx": 3878,
+                        "lly": 0,
+                        "urx": 3902,
+                        "ury": 69
+                    }
+                ]
+            },
+            {
+                "AIL2": [
+                    {
+                        "llx": 3388,
+                        "lly": 0,
+                        "urx": 3412,
+                        "ury": 67
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false
+        ]
+    },
+    "RULE_GIL001": {
+        "examples": [
+            {
+                "GIL": [
+                    {
+                        "llx": 0,
+                        "lly": 2762,
+                        "urx": 5,
+                        "ury": 2806
+                    }
+                ]
+            },
+            {
+                "GIL": [
+                    {
+                        "llx": 0,
+                        "lly": 1881,
+                        "urx": 5,
+                        "ury": 1924
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_GIL002": {
+        "examples": [
+            {
+                "GIL": [
+                    {
+                        "llx": 0,
+                        "lly": 2762,
+                        "urx": 56,
+                        "ury": 2806
+                    }
+                ]
+            },
+            {
+                "GIL": [
+                    {
+                        "llx": 0,
+                        "lly": 1883,
+                        "urx": 55,
+                        "ury": 1927
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_V0001a": {
+        "examples": [
+            {
+                "V0": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "V0": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 29
+                    }
+                ]
+            },
+            {
+                "V0": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 309,
+                        "ury": 27
+                    }
+                ]
+            },
+            {
+                "V0": [
+                    {
+                        "llx": 0,
+                        "lly": 3882,
+                        "urx": 29,
+                        "ury": 3910
+                    }
+                ]
+            },
+            {
+                "V0": [
+                    {
+                        "llx": 0,
+                        "lly": 4449,
+                        "urx": 29,
+                        "ury": 4478
+                    }
+                ]
+            },
+            {
+                "V0": [
+                    {
+                        "llx": 0,
+                        "lly": 2669,
+                        "urx": 29,
+                        "ury": 2696
+                    }
+                ]
+            },
+            {
+                "V0": [
+                    {
+                        "llx": 0,
+                        "lly": 2447,
+                        "urx": 27,
+                        "ury": 2475
+                    }
+                ]
+            },
+            {
+                "V0": [
+                    {
+                        "llx": 0,
+                        "lly": 4192,
+                        "urx": 27,
+                        "ury": 4221
+                    }
+                ]
+            },
+            {
+                "V0": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_M1001A": {
+        "examples": [
+            {
+                "M1A": [
+                    {
+                        "llx": 2517,
+                        "lly": 0,
+                        "urx": 4917,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 0,
+                        "lly": 1805,
+                        "urx": 2401,
+                        "ury": 1810
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 1346,
+                        "lly": 0,
+                        "urx": 1374,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 1362,
+                        "lly": 0,
+                        "urx": 1394,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 2758,
+                        "lly": 0,
+                        "urx": 2798,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 0,
+                        "lly": 281,
+                        "urx": 2399,
+                        "ury": 286
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 0,
+                        "lly": 933,
+                        "urx": 39,
+                        "ury": 938
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 0,
+                        "lly": 3120,
+                        "urx": 31,
+                        "ury": 3125
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 0,
+                        "lly": 2309,
+                        "urx": 27,
+                        "ury": 2314
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_M1003A": {
+        "examples": [
+            {
+                "M1A": [
+                    {
+                        "llx": 4539,
+                        "lly": 0,
+                        "urx": 4567,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 0,
+                        "lly": 1229,
+                        "urx": 32,
+                        "ury": 3029
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 0,
+                        "lly": 413,
+                        "urx": 32,
+                        "ury": 2214
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_M1027A": {
+        "examples": [
+            {
+                "M1A": [
+                    {
+                        "llx": 1,
+                        "lly": 0,
+                        "urx": 33,
+                        "ury": 75
+                    }
+                ]
+            },
+            {
+                "M1A": [
+                    {
+                        "llx": 0,
+                        "lly": 1,
+                        "urx": 28,
+                        "ury": 86
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_M1001B": {
+        "examples": [
+            {
+                "M1B": [
+                    {
+                        "llx": 2746,
+                        "lly": 0,
+                        "urx": 2774,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 1362,
+                        "lly": 0,
+                        "urx": 1394,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 2517,
+                        "lly": 0,
+                        "urx": 4917,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 0,
+                        "lly": 1805,
+                        "urx": 2401,
+                        "ury": 1810
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 2758,
+                        "lly": 0,
+                        "urx": 2798,
+                        "ury": 5
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 0,
+                        "lly": 2309,
+                        "urx": 41,
+                        "ury": 2314
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 0,
+                        "lly": 1805,
+                        "urx": 33,
+                        "ury": 1810
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 0,
+                        "lly": 3859,
+                        "urx": 29,
+                        "ury": 3864
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 0,
+                        "lly": 2309,
+                        "urx": 27,
+                        "ury": 2314
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_M1003B": {
+        "examples": [
+            {
+                "M1B": [
+                    {
+                        "llx": 1273,
+                        "lly": 0,
+                        "urx": 1301,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 0,
+                        "lly": 239,
+                        "urx": 32,
+                        "ury": 2039
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 0,
+                        "lly": 285,
+                        "urx": 32,
+                        "ury": 2086
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_M1027B": {
+        "examples": [
+            {
+                "M1B": [
+                    {
+                        "llx": 2,
+                        "lly": 0,
+                        "urx": 34,
+                        "ury": 1802
+                    }
+                ]
+            },
+            {
+                "M1B": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 28,
+                        "ury": 85
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_M1001": {
+        "examples": [
+            {
+                "M1": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "M1": [
+                    {
+                        "llx": 0,
+                        "lly": 1036,
+                        "urx": 28,
+                        "ury": 1063
+                    }
+                ]
+            },
+            {
+                "M1": [
+                    {
+                        "llx": 0,
+                        "lly": 1905,
+                        "urx": 27,
+                        "ury": 1933
+                    }
+                ]
+            },
+            {
+                "M1": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_M1003": {
+        "examples": [
+            {
+                "M1": [
+                    {
+                        "llx": 2656,
+                        "lly": 0,
+                        "urx": 2684,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "M1": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "M1": [
+                    {
+                        "llx": 0,
+                        "lly": 1293,
+                        "urx": 29,
+                        "ury": 3093
+                    }
+                ]
+            },
+            {
+                "M1": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_M1027": {
+        "examples": [
+            {
+                "M1": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "M1": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 28
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_V1001a": {
+        "examples": [
+            {
+                "V1": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "V1": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 29
+                    }
+                ]
+            },
+            {
+                "V1": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 309,
+                        "ury": 27
+                    }
+                ]
+            },
+            {
+                "V1": [
+                    {
+                        "llx": 0,
+                        "lly": 3882,
+                        "urx": 29,
+                        "ury": 3910
+                    }
+                ]
+            },
+            {
+                "V1": [
+                    {
+                        "llx": 0,
+                        "lly": 3393,
+                        "urx": 29,
+                        "ury": 3422
+                    }
+                ]
+            },
+            {
+                "V1": [
+                    {
+                        "llx": 0,
+                        "lly": 1985,
+                        "urx": 29,
+                        "ury": 2012
+                    }
+                ]
+            },
+            {
+                "V1": [
+                    {
+                        "llx": 0,
+                        "lly": 3392,
+                        "urx": 27,
+                        "ury": 3420
+                    }
+                ]
+            },
+            {
+                "V1": [
+                    {
+                        "llx": 0,
+                        "lly": 2657,
+                        "urx": 27,
+                        "ury": 2686
+                    }
+                ]
+            },
+            {
+                "V1": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_VINT1001a": {
+        "examples": [
+            {
+                "VINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "VINT1": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 29
+                    }
+                ]
+            },
+            {
+                "VINT1": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 309,
+                        "ury": 27
+                    }
+                ]
+            },
+            {
+                "VINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 3882,
+                        "urx": 29,
+                        "ury": 3910
+                    }
+                ]
+            },
+            {
+                "VINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 1764,
+                        "urx": 29,
+                        "ury": 1793
+                    }
+                ]
+            },
+            {
+                "VINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 2669,
+                        "urx": 29,
+                        "ury": 2696
+                    }
+                ]
+            },
+            {
+                "VINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 3392,
+                        "urx": 27,
+                        "ury": 3420
+                    }
+                ]
+            },
+            {
+                "VINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 4192,
+                        "urx": 27,
+                        "ury": 4221
+                    }
+                ]
+            },
+            {
+                "VINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_VINT2001a": {
+        "examples": [
+            {
+                "VINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "VINT2": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 29
+                    }
+                ]
+            },
+            {
+                "VINT2": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 309,
+                        "ury": 27
+                    }
+                ]
+            },
+            {
+                "VINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 1851,
+                        "urx": 29,
+                        "ury": 1879
+                    }
+                ]
+            },
+            {
+                "VINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 3393,
+                        "urx": 29,
+                        "ury": 3422
+                    }
+                ]
+            },
+            {
+                "VINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 1985,
+                        "urx": 29,
+                        "ury": 2012
+                    }
+                ]
+            },
+            {
+                "VINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 3392,
+                        "urx": 27,
+                        "ury": 3420
+                    }
+                ]
+            },
+            {
+                "VINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 4192,
+                        "urx": 27,
+                        "ury": 4221
+                    }
+                ]
+            },
+            {
+                "VINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_VINT3001a": {
+        "examples": [
+            {
+                "VINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "VINT3": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 29
+                    }
+                ]
+            },
+            {
+                "VINT3": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 309,
+                        "ury": 27
+                    }
+                ]
+            },
+            {
+                "VINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 1851,
+                        "urx": 29,
+                        "ury": 1879
+                    }
+                ]
+            },
+            {
+                "VINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 1853,
+                        "urx": 29,
+                        "ury": 1882
+                    }
+                ]
+            },
+            {
+                "VINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 2669,
+                        "urx": 29,
+                        "ury": 2696
+                    }
+                ]
+            },
+            {
+                "VINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 2447,
+                        "urx": 27,
+                        "ury": 2475
+                    }
+                ]
+            },
+            {
+                "VINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 2657,
+                        "urx": 27,
+                        "ury": 2686
+                    }
+                ]
+            },
+            {
+                "VINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_VINT4001a": {
+        "examples": [
+            {
+                "VINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "VINT4": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 29
+                    }
+                ]
+            },
+            {
+                "VINT4": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 309,
+                        "ury": 27
+                    }
+                ]
+            },
+            {
+                "VINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 3882,
+                        "urx": 29,
+                        "ury": 3910
+                    }
+                ]
+            },
+            {
+                "VINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 1026,
+                        "urx": 29,
+                        "ury": 1055
+                    }
+                ]
+            },
+            {
+                "VINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 1985,
+                        "urx": 29,
+                        "ury": 2012
+                    }
+                ]
+            },
+            {
+                "VINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 2447,
+                        "urx": 27,
+                        "ury": 2475
+                    }
+                ]
+            },
+            {
+                "VINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 4192,
+                        "urx": 27,
+                        "ury": 4221
+                    }
+                ]
+            },
+            {
+                "VINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_VINT5001a": {
+        "examples": [
+            {
+                "VINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "VINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 3882,
+                        "urx": 29,
+                        "ury": 3910
+                    }
+                ]
+            },
+            {
+                "VINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 281,
+                        "urx": 27,
+                        "ury": 309
+                    }
+                ]
+            },
+            {
+                "VINT5": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 29
+                    }
+                ]
+            },
+            {
+                "VINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 780,
+                        "urx": 29,
+                        "ury": 809
+                    }
+                ]
+            },
+            {
+                "VINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 2673,
+                        "urx": 27,
+                        "ury": 2702
+                    }
+                ]
+            },
+            {
+                "VINT5": [
+                    {
+                        "llx": 3392,
+                        "lly": 0,
+                        "urx": 3420,
+                        "ury": 27
+                    }
+                ]
+            },
+            {
+                "VINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 2655,
+                        "urx": 29,
+                        "ury": 2682
+                    }
+                ]
+            },
+            {
+                "VINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT1001A": {
+        "examples": [
+            {
+                "MINT1A": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "MINT1A": [
+                    {
+                        "llx": 0,
+                        "lly": 1041,
+                        "urx": 27,
+                        "ury": 1069
+                    }
+                ]
+            },
+            {
+                "MINT1A": [
+                    {
+                        "llx": 0,
+                        "lly": 1904,
+                        "urx": 28,
+                        "ury": 1931
+                    }
+                ]
+            },
+            {
+                "MINT1A": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT1003A": {
+        "examples": [
+            {
+                "MINT1A": [
+                    {
+                        "llx": 2656,
+                        "lly": 0,
+                        "urx": 2684,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT1A": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT1A": [
+                    {
+                        "llx": 0,
+                        "lly": 1482,
+                        "urx": 29,
+                        "ury": 3282
+                    }
+                ]
+            },
+            {
+                "MINT1A": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT1027A": {
+        "examples": [
+            {
+                "MINT1A": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT1A": [
+                    {
+                        "llx": 0,
+                        "lly": 2,
+                        "urx": 30,
+                        "ury": 31
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT1001B": {
+        "examples": [
+            {
+                "MINT1B": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "MINT1B": [
+                    {
+                        "llx": 0,
+                        "lly": 1036,
+                        "urx": 28,
+                        "ury": 1063
+                    }
+                ]
+            },
+            {
+                "MINT1B": [
+                    {
+                        "llx": 0,
+                        "lly": 1905,
+                        "urx": 27,
+                        "ury": 1933
+                    }
+                ]
+            },
+            {
+                "MINT1B": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT1003B": {
+        "examples": [
+            {
+                "MINT1B": [
+                    {
+                        "llx": 2671,
+                        "lly": 0,
+                        "urx": 2699,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT1B": [
+                    {
+                        "llx": 0,
+                        "lly": 3023,
+                        "urx": 29,
+                        "ury": 4823
+                    }
+                ]
+            },
+            {
+                "MINT1B": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT1B": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            true,
+            false,
+            true
+        ]
+    },
+    "RULE_MINT1027B": {
+        "examples": [
+            {
+                "MINT1B": [
+                    {
+                        "llx": 2,
+                        "lly": 1,
+                        "urx": 31,
+                        "ury": 1802
+                    }
+                ]
+            },
+            {
+                "MINT1B": [
+                    {
+                        "llx": 0,
+                        "lly": 2,
+                        "urx": 30,
+                        "ury": 31
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT1001": {
+        "examples": [
+            {
+                "MINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "MINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 1041,
+                        "urx": 27,
+                        "ury": 1069
+                    }
+                ]
+            },
+            {
+                "MINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 1904,
+                        "urx": 28,
+                        "ury": 1931
+                    }
+                ]
+            },
+            {
+                "MINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT1003": {
+        "examples": [
+            {
+                "MINT1": [
+                    {
+                        "llx": 2656,
+                        "lly": 0,
+                        "urx": 2684,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT1": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 1293,
+                        "urx": 29,
+                        "ury": 3093
+                    }
+                ]
+            },
+            {
+                "MINT1": [
+                    {
+                        "llx": 0,
+                        "lly": 2455,
+                        "urx": 29,
+                        "ury": 4256
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT1027": {
+        "examples": [
+            {
+                "MINT1": [
+                    {
+                        "llx": 2,
+                        "lly": 2,
+                        "urx": 31,
+                        "ury": 1803
+                    }
+                ]
+            },
+            {
+                "MINT1": [
+                    {
+                        "llx": 2,
+                        "lly": 0,
+                        "urx": 31,
+                        "ury": 28
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT2001A": {
+        "examples": [
+            {
+                "MINT2A": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "MINT2A": [
+                    {
+                        "llx": 0,
+                        "lly": 1041,
+                        "urx": 27,
+                        "ury": 1069
+                    }
+                ]
+            },
+            {
+                "MINT2A": [
+                    {
+                        "llx": 0,
+                        "lly": 1904,
+                        "urx": 28,
+                        "ury": 1931
+                    }
+                ]
+            },
+            {
+                "MINT2A": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT2003A": {
+        "examples": [
+            {
+                "MINT2A": [
+                    {
+                        "llx": 2656,
+                        "lly": 0,
+                        "urx": 2684,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT2A": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT2A": [
+                    {
+                        "llx": 0,
+                        "lly": 409,
+                        "urx": 29,
+                        "ury": 2209
+                    }
+                ]
+            },
+            {
+                "MINT2A": [
+                    {
+                        "llx": 0,
+                        "lly": 2455,
+                        "urx": 29,
+                        "ury": 4256
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT2027A": {
+        "examples": [
+            {
+                "MINT2A": [
+                    {
+                        "llx": 0,
+                        "lly": 2,
+                        "urx": 30,
+                        "ury": 1804
+                    }
+                ]
+            },
+            {
+                "MINT2A": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 28
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT2001B": {
+        "examples": [
+            {
+                "MINT2B": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "MINT2B": [
+                    {
+                        "llx": 0,
+                        "lly": 1041,
+                        "urx": 27,
+                        "ury": 1069
+                    }
+                ]
+            },
+            {
+                "MINT2B": [
+                    {
+                        "llx": 0,
+                        "lly": 1904,
+                        "urx": 28,
+                        "ury": 1931
+                    }
+                ]
+            },
+            {
+                "MINT2B": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT2003B": {
+        "examples": [
+            {
+                "MINT2B": [
+                    {
+                        "llx": 1703,
+                        "lly": 0,
+                        "urx": 1731,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT2B": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT2B": [
+                    {
+                        "llx": 0,
+                        "lly": 1293,
+                        "urx": 29,
+                        "ury": 3093
+                    }
+                ]
+            },
+            {
+                "MINT2B": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT2027B": {
+        "examples": [
+            {
+                "MINT2B": [
+                    {
+                        "llx": 2,
+                        "lly": 2,
+                        "urx": 33,
+                        "ury": 1804
+                    }
+                ]
+            },
+            {
+                "MINT2B": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 28
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT2001": {
+        "examples": [
+            {
+                "MINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "MINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 1036,
+                        "urx": 28,
+                        "ury": 1063
+                    }
+                ]
+            },
+            {
+                "MINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 1905,
+                        "urx": 27,
+                        "ury": 1933
+                    }
+                ]
+            },
+            {
+                "MINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT2003": {
+        "examples": [
+            {
+                "MINT2": [
+                    {
+                        "llx": 2656,
+                        "lly": 0,
+                        "urx": 2684,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT2": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 1482,
+                        "urx": 29,
+                        "ury": 3282
+                    }
+                ]
+            },
+            {
+                "MINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT2027": {
+        "examples": [
+            {
+                "MINT2": [
+                    {
+                        "llx": 2,
+                        "lly": 2,
+                        "urx": 32,
+                        "ury": 1804
+                    }
+                ]
+            },
+            {
+                "MINT2": [
+                    {
+                        "llx": 0,
+                        "lly": 2,
+                        "urx": 30,
+                        "ury": 31
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT3001A": {
+        "examples": [
+            {
+                "MINT3A": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "MINT3A": [
+                    {
+                        "llx": 0,
+                        "lly": 1041,
+                        "urx": 27,
+                        "ury": 1069
+                    }
+                ]
+            },
+            {
+                "MINT3A": [
+                    {
+                        "llx": 0,
+                        "lly": 1904,
+                        "urx": 28,
+                        "ury": 1931
+                    }
+                ]
+            },
+            {
+                "MINT3A": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT3003A": {
+        "examples": [
+            {
+                "MINT3A": [
+                    {
+                        "llx": 2147,
+                        "lly": 0,
+                        "urx": 2175,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT3A": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT3A": [
+                    {
+                        "llx": 0,
+                        "lly": 1482,
+                        "urx": 29,
+                        "ury": 3282
+                    }
+                ]
+            },
+            {
+                "MINT3A": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT3027A": {
+        "examples": [
+            {
+                "MINT3A": [
+                    {
+                        "llx": 6,
+                        "lly": 3,
+                        "urx": 86,
+                        "ury": 33
+                    }
+                ]
+            },
+            {
+                "MINT3A": [
+                    {
+                        "llx": 0,
+                        "lly": 1,
+                        "urx": 29,
+                        "ury": 29
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT3001B": {
+        "examples": [
+            {
+                "MINT3B": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "MINT3B": [
+                    {
+                        "llx": 0,
+                        "lly": 1041,
+                        "urx": 27,
+                        "ury": 1069
+                    }
+                ]
+            },
+            {
+                "MINT3B": [
+                    {
+                        "llx": 0,
+                        "lly": 1904,
+                        "urx": 28,
+                        "ury": 1931
+                    }
+                ]
+            },
+            {
+                "MINT3B": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT3003B": {
+        "examples": [
+            {
+                "MINT3B": [
+                    {
+                        "llx": 1703,
+                        "lly": 0,
+                        "urx": 1731,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT3B": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT3B": [
+                    {
+                        "llx": 0,
+                        "lly": 409,
+                        "urx": 29,
+                        "ury": 2209
+                    }
+                ]
+            },
+            {
+                "MINT3B": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT3027B": {
+        "examples": [
+            {
+                "MINT3B": [
+                    {
+                        "llx": 2,
+                        "lly": 2,
+                        "urx": 32,
+                        "ury": 1804
+                    }
+                ]
+            },
+            {
+                "MINT3B": [
+                    {
+                        "llx": 0,
+                        "lly": 1,
+                        "urx": 29,
+                        "ury": 29
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT3001": {
+        "examples": [
+            {
+                "MINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "MINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 1036,
+                        "urx": 28,
+                        "ury": 1063
+                    }
+                ]
+            },
+            {
+                "MINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 1905,
+                        "urx": 27,
+                        "ury": 1933
+                    }
+                ]
+            },
+            {
+                "MINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT3003": {
+        "examples": [
+            {
+                "MINT3": [
+                    {
+                        "llx": 2656,
+                        "lly": 0,
+                        "urx": 2684,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT3": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 409,
+                        "urx": 29,
+                        "ury": 2209
+                    }
+                ]
+            },
+            {
+                "MINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT3027": {
+        "examples": [
+            {
+                "MINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT3": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 28
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT4001A": {
+        "examples": [
+            {
+                "MINT4A": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "MINT4A": [
+                    {
+                        "llx": 0,
+                        "lly": 1036,
+                        "urx": 28,
+                        "ury": 1063
+                    }
+                ]
+            },
+            {
+                "MINT4A": [
+                    {
+                        "llx": 0,
+                        "lly": 1905,
+                        "urx": 27,
+                        "ury": 1933
+                    }
+                ]
+            },
+            {
+                "MINT4A": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT4003A": {
+        "examples": [
+            {
+                "MINT4A": [
+                    {
+                        "llx": 4668,
+                        "lly": 0,
+                        "urx": 4696,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT4A": [
+                    {
+                        "llx": 0,
+                        "lly": 668,
+                        "urx": 29,
+                        "ury": 2468
+                    }
+                ]
+            },
+            {
+                "MINT4A": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT4A": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            true,
+            false,
+            true
+        ]
+    },
+    "RULE_MINT4027A": {
+        "examples": [
+            {
+                "MINT4A": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT4A": [
+                    {
+                        "llx": 0,
+                        "lly": 1,
+                        "urx": 29,
+                        "ury": 29
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT4001B": {
+        "examples": [
+            {
+                "MINT4B": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "MINT4B": [
+                    {
+                        "llx": 0,
+                        "lly": 1036,
+                        "urx": 28,
+                        "ury": 1063
+                    }
+                ]
+            },
+            {
+                "MINT4B": [
+                    {
+                        "llx": 0,
+                        "lly": 1905,
+                        "urx": 27,
+                        "ury": 1933
+                    }
+                ]
+            },
+            {
+                "MINT4B": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT4003B": {
+        "examples": [
+            {
+                "MINT4B": [
+                    {
+                        "llx": 867,
+                        "lly": 0,
+                        "urx": 895,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT4B": [
+                    {
+                        "llx": 0,
+                        "lly": 668,
+                        "urx": 29,
+                        "ury": 2468
+                    }
+                ]
+            },
+            {
+                "MINT4B": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT4B": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            true,
+            false,
+            true
+        ]
+    },
+    "RULE_MINT4027B": {
+        "examples": [
+            {
+                "MINT4B": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT4B": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 28
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT4001": {
+        "examples": [
+            {
+                "MINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 28,
+                        "ury": 1374
+                    }
+                ]
+            },
+            {
+                "MINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 1036,
+                        "urx": 28,
+                        "ury": 1063
+                    }
+                ]
+            },
+            {
+                "MINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 1905,
+                        "urx": 27,
+                        "ury": 1933
+                    }
+                ]
+            },
+            {
+                "MINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 1415,
+                        "urx": 27,
+                        "ury": 1442
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT4003": {
+        "examples": [
+            {
+                "MINT4": [
+                    {
+                        "llx": 3559,
+                        "lly": 0,
+                        "urx": 3587,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT4": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 1482,
+                        "urx": 29,
+                        "ury": 3282
+                    }
+                ]
+            },
+            {
+                "MINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 2455,
+                        "urx": 29,
+                        "ury": 4256
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT4027": {
+        "examples": [
+            {
+                "MINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT4": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 28
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT5001A": {
+        "examples": [
+            {
+                "MINT5A": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "MINT5A": [
+                    {
+                        "llx": 0,
+                        "lly": 1041,
+                        "urx": 27,
+                        "ury": 1069
+                    }
+                ]
+            },
+            {
+                "MINT5A": [
+                    {
+                        "llx": 0,
+                        "lly": 1904,
+                        "urx": 28,
+                        "ury": 1931
+                    }
+                ]
+            },
+            {
+                "MINT5A": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT5003A": {
+        "examples": [
+            {
+                "MINT5A": [
+                    {
+                        "llx": 2147,
+                        "lly": 0,
+                        "urx": 2175,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT5A": [
+                    {
+                        "llx": 3882,
+                        "lly": 0,
+                        "urx": 3910,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT5A": [
+                    {
+                        "llx": 0,
+                        "lly": 1293,
+                        "urx": 29,
+                        "ury": 3093
+                    }
+                ]
+            },
+            {
+                "MINT5A": [
+                    {
+                        "llx": 0,
+                        "lly": 2197,
+                        "urx": 29,
+                        "ury": 3998
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT5027A": {
+        "examples": [
+            {
+                "MINT5A": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT5A": [
+                    {
+                        "llx": 0,
+                        "lly": 1,
+                        "urx": 29,
+                        "ury": 29
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT5001B": {
+        "examples": [
+            {
+                "MINT5B": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "MINT5B": [
+                    {
+                        "llx": 0,
+                        "lly": 1036,
+                        "urx": 28,
+                        "ury": 1063
+                    }
+                ]
+            },
+            {
+                "MINT5B": [
+                    {
+                        "llx": 0,
+                        "lly": 1905,
+                        "urx": 27,
+                        "ury": 1933
+                    }
+                ]
+            },
+            {
+                "MINT5B": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT5003B": {
+        "examples": [
+            {
+                "MINT5B": [
+                    {
+                        "llx": 2656,
+                        "lly": 0,
+                        "urx": 2684,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT5B": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT5B": [
+                    {
+                        "llx": 0,
+                        "lly": 1482,
+                        "urx": 29,
+                        "ury": 3282
+                    }
+                ]
+            },
+            {
+                "MINT5B": [
+                    {
+                        "llx": 0,
+                        "lly": 2455,
+                        "urx": 29,
+                        "ury": 4256
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MINT5027B": {
+        "examples": [
+            {
+                "MINT5B": [
+                    {
+                        "llx": 2,
+                        "lly": 2,
+                        "urx": 32,
+                        "ury": 1804
+                    }
+                ]
+            },
+            {
+                "MINT5B": [
+                    {
+                        "llx": 0,
+                        "lly": 1,
+                        "urx": 29,
+                        "ury": 29
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_MINT5001": {
+        "examples": [
+            {
+                "MINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 2746,
+                        "urx": 28,
+                        "ury": 2774
+                    }
+                ]
+            },
+            {
+                "MINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 1036,
+                        "urx": 28,
+                        "ury": 1063
+                    }
+                ]
+            },
+            {
+                "MINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 1905,
+                        "urx": 27,
+                        "ury": 1933
+                    }
+                ]
+            },
+            {
+                "MINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 999,
+                        "urx": 27,
+                        "ury": 1026
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MINT5003": {
+        "examples": [
+            {
+                "MINT5": [
+                    {
+                        "llx": 867,
+                        "lly": 0,
+                        "urx": 895,
+                        "ury": 1800
+                    }
+                ]
+            },
+            {
+                "MINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 668,
+                        "urx": 29,
+                        "ury": 2468
+                    }
+                ]
+            },
+            {
+                "MINT5": [
+                    {
+                        "llx": 1851,
+                        "lly": 0,
+                        "urx": 1879,
+                        "ury": 1801
+                    }
+                ]
+            },
+            {
+                "MINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 2455,
+                        "urx": 29,
+                        "ury": 4256
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            true,
+            false,
+            true
+        ]
+    },
+    "RULE_MINT5027": {
+        "examples": [
+            {
+                "MINT5": [
+                    {
+                        "llx": 1,
+                        "lly": 0,
+                        "urx": 32,
+                        "ury": 1802
+                    }
+                ]
+            },
+            {
+                "MINT5": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 29,
+                        "ury": 82
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false
+        ]
+    },
+    "RULE_VSMG1001a": {
+        "examples": [
+            {
+                "VSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 2774,
+                        "urx": 56,
+                        "ury": 2830
+                    }
+                ]
+            },
+            {
+                "VSMG1": [
+                    {
+                        "llx": 1907,
+                        "lly": 0,
+                        "urx": 1963,
+                        "ury": 57
+                    }
+                ]
+            },
+            {
+                "VSMG1": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 337,
+                        "ury": 55
+                    }
+                ]
+            },
+            {
+                "VSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1907,
+                        "urx": 57,
+                        "ury": 1963
+                    }
+                ]
+            },
+            {
+                "VSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 3421,
+                        "urx": 57,
+                        "ury": 3478
+                    }
+                ]
+            },
+            {
+                "VSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 2725,
+                        "urx": 57,
+                        "ury": 2780
+                    }
+                ]
+            },
+            {
+                "VSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 3420,
+                        "urx": 55,
+                        "ury": 3476
+                    }
+                ]
+            },
+            {
+                "VSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 2685,
+                        "urx": 55,
+                        "ury": 2742
+                    }
+                ]
+            },
+            {
+                "VSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1555,
+                        "urx": 55,
+                        "ury": 1610
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_VSMG2001a": {
+        "examples": [
+            {
+                "VSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1458,
+                        "urx": 56,
+                        "ury": 1514
+                    }
+                ]
+            },
+            {
+                "VSMG2": [
+                    {
+                        "llx": 1907,
+                        "lly": 0,
+                        "urx": 1963,
+                        "ury": 57
+                    }
+                ]
+            },
+            {
+                "VSMG2": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 337,
+                        "ury": 55
+                    }
+                ]
+            },
+            {
+                "VSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1907,
+                        "urx": 57,
+                        "ury": 1963
+                    }
+                ]
+            },
+            {
+                "VSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 3421,
+                        "urx": 57,
+                        "ury": 3478
+                    }
+                ]
+            },
+            {
+                "VSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 2725,
+                        "urx": 57,
+                        "ury": 2780
+                    }
+                ]
+            },
+            {
+                "VSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 3420,
+                        "urx": 55,
+                        "ury": 3476
+                    }
+                ]
+            },
+            {
+                "VSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 2685,
+                        "urx": 55,
+                        "ury": 2742
+                    }
+                ]
+            },
+            {
+                "VSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1083,
+                        "urx": 55,
+                        "ury": 1138
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_VSMG3001a": {
+        "examples": [
+            {
+                "VSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 2774,
+                        "urx": 56,
+                        "ury": 2830
+                    }
+                ]
+            },
+            {
+                "VSMG3": [
+                    {
+                        "llx": 3910,
+                        "lly": 0,
+                        "urx": 3966,
+                        "ury": 57
+                    }
+                ]
+            },
+            {
+                "VSMG3": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 337,
+                        "ury": 55
+                    }
+                ]
+            },
+            {
+                "VSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 1907,
+                        "urx": 57,
+                        "ury": 1963
+                    }
+                ]
+            },
+            {
+                "VSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 1909,
+                        "urx": 57,
+                        "ury": 1966
+                    }
+                ]
+            },
+            {
+                "VSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 2069,
+                        "urx": 57,
+                        "ury": 2124
+                    }
+                ]
+            },
+            {
+                "VSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 3420,
+                        "urx": 55,
+                        "ury": 3476
+                    }
+                ]
+            },
+            {
+                "VSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 2685,
+                        "urx": 55,
+                        "ury": 2742
+                    }
+                ]
+            },
+            {
+                "VSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 1083,
+                        "urx": 55,
+                        "ury": 1138
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_VSMG4001a": {
+        "examples": [
+            {
+                "VSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 1458,
+                        "urx": 56,
+                        "ury": 1514
+                    }
+                ]
+            },
+            {
+                "VSMG4": [
+                    {
+                        "llx": 1907,
+                        "lly": 0,
+                        "urx": 1963,
+                        "ury": 57
+                    }
+                ]
+            },
+            {
+                "VSMG4": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 337,
+                        "ury": 55
+                    }
+                ]
+            },
+            {
+                "VSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 1907,
+                        "urx": 57,
+                        "ury": 1963
+                    }
+                ]
+            },
+            {
+                "VSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 4561,
+                        "urx": 57,
+                        "ury": 4618
+                    }
+                ]
+            },
+            {
+                "VSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 2725,
+                        "urx": 57,
+                        "ury": 2780
+                    }
+                ]
+            },
+            {
+                "VSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 2615,
+                        "urx": 55,
+                        "ury": 2671
+                    }
+                ]
+            },
+            {
+                "VSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 4248,
+                        "urx": 55,
+                        "ury": 4305
+                    }
+                ]
+            },
+            {
+                "VSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 1555,
+                        "urx": 55,
+                        "ury": 1610
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_VSMG5001a": {
+        "examples": [
+            {
+                "VSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 2774,
+                        "urx": 56,
+                        "ury": 2830
+                    }
+                ]
+            },
+            {
+                "VSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 1907,
+                        "urx": 57,
+                        "ury": 1963
+                    }
+                ]
+            },
+            {
+                "VSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 281,
+                        "urx": 55,
+                        "ury": 337
+                    }
+                ]
+            },
+            {
+                "VSMG5": [
+                    {
+                        "llx": 3910,
+                        "lly": 0,
+                        "urx": 3966,
+                        "ury": 57
+                    }
+                ]
+            },
+            {
+                "VSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 2621,
+                        "urx": 57,
+                        "ury": 2678
+                    }
+                ]
+            },
+            {
+                "VSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 2729,
+                        "urx": 55,
+                        "ury": 2786
+                    }
+                ]
+            },
+            {
+                "VSMG5": [
+                    {
+                        "llx": 3420,
+                        "lly": 0,
+                        "urx": 3476,
+                        "ury": 55
+                    }
+                ]
+            },
+            {
+                "VSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 4244,
+                        "urx": 57,
+                        "ury": 4299
+                    }
+                ]
+            },
+            {
+                "VSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 1555,
+                        "urx": 55,
+                        "ury": 1610
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MSMG1001": {
+        "examples": [
+            {
+                "MSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1458,
+                        "urx": 56,
+                        "ury": 1514
+                    }
+                ]
+            },
+            {
+                "MSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1176,
+                        "urx": 56,
+                        "ury": 1231
+                    }
+                ]
+            },
+            {
+                "MSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1933,
+                        "urx": 55,
+                        "ury": 1989
+                    }
+                ]
+            },
+            {
+                "MSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1555,
+                        "urx": 55,
+                        "ury": 1610
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MSMG1003": {
+        "examples": [
+            {
+                "MSMG1": [
+                    {
+                        "llx": 1759,
+                        "lly": 0,
+                        "urx": 1815,
+                        "ury": 1920
+                    }
+                ]
+            },
+            {
+                "MSMG1": [
+                    {
+                        "llx": 3910,
+                        "lly": 0,
+                        "urx": 3966,
+                        "ury": 1921
+                    }
+                ]
+            },
+            {
+                "MSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1602,
+                        "urx": 57,
+                        "ury": 3522
+                    }
+                ]
+            },
+            {
+                "MSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 2557,
+                        "urx": 57,
+                        "ury": 4478
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MSMG1014": {
+        "examples": [
+            {
+                "MSMG1": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 57,
+                        "ury": 1921
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true
+        ]
+    },
+    "RULE_MSMG2001": {
+        "examples": [
+            {
+                "MSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1458,
+                        "urx": 56,
+                        "ury": 1514
+                    }
+                ]
+            },
+            {
+                "MSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1176,
+                        "urx": 56,
+                        "ury": 1231
+                    }
+                ]
+            },
+            {
+                "MSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1933,
+                        "urx": 55,
+                        "ury": 1989
+                    }
+                ]
+            },
+            {
+                "MSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1555,
+                        "urx": 55,
+                        "ury": 1610
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MSMG2003": {
+        "examples": [
+            {
+                "MSMG2": [
+                    {
+                        "llx": 4808,
+                        "lly": 0,
+                        "urx": 4864,
+                        "ury": 1920
+                    }
+                ]
+            },
+            {
+                "MSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 2907,
+                        "urx": 57,
+                        "ury": 4827
+                    }
+                ]
+            },
+            {
+                "MSMG2": [
+                    {
+                        "llx": 3910,
+                        "lly": 0,
+                        "urx": 3966,
+                        "ury": 1921
+                    }
+                ]
+            },
+            {
+                "MSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 2695,
+                        "urx": 57,
+                        "ury": 4616
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            true,
+            false,
+            true
+        ]
+    },
+    "RULE_MSMG2014": {
+        "examples": [
+            {
+                "MSMG2": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 57,
+                        "ury": 1921
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true
+        ]
+    },
+    "RULE_MSMG3001": {
+        "examples": [
+            {
+                "MSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 1458,
+                        "urx": 56,
+                        "ury": 1514
+                    }
+                ]
+            },
+            {
+                "MSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 1176,
+                        "urx": 56,
+                        "ury": 1231
+                    }
+                ]
+            },
+            {
+                "MSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 1933,
+                        "urx": 55,
+                        "ury": 1989
+                    }
+                ]
+            },
+            {
+                "MSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 1555,
+                        "urx": 55,
+                        "ury": 1610
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MSMG3003": {
+        "examples": [
+            {
+                "MSMG3": [
+                    {
+                        "llx": 2231,
+                        "lly": 0,
+                        "urx": 2287,
+                        "ury": 1920
+                    }
+                ]
+            },
+            {
+                "MSMG3": [
+                    {
+                        "llx": 3910,
+                        "lly": 0,
+                        "urx": 3966,
+                        "ury": 1921
+                    }
+                ]
+            },
+            {
+                "MSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 1602,
+                        "urx": 57,
+                        "ury": 3522
+                    }
+                ]
+            },
+            {
+                "MSMG3": [
+                    {
+                        "llx": 0,
+                        "lly": 2557,
+                        "urx": 57,
+                        "ury": 4478
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MSMG3014": {
+        "examples": [
+            {
+                "MSMG3": [
+                    {
+                        "llx": 3,
+                        "lly": 2,
+                        "urx": 59,
+                        "ury": 58
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true
+        ]
+    },
+    "RULE_MSMG4001": {
+        "examples": [
+            {
+                "MSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 1458,
+                        "urx": 56,
+                        "ury": 1514
+                    }
+                ]
+            },
+            {
+                "MSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 1176,
+                        "urx": 56,
+                        "ury": 1231
+                    }
+                ]
+            },
+            {
+                "MSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 1933,
+                        "urx": 55,
+                        "ury": 1989
+                    }
+                ]
+            },
+            {
+                "MSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 1555,
+                        "urx": 55,
+                        "ury": 1610
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MSMG4003": {
+        "examples": [
+            {
+                "MSMG4": [
+                    {
+                        "llx": 1759,
+                        "lly": 0,
+                        "urx": 1815,
+                        "ury": 1920
+                    }
+                ]
+            },
+            {
+                "MSMG4": [
+                    {
+                        "llx": 1907,
+                        "lly": 0,
+                        "urx": 1963,
+                        "ury": 1921
+                    }
+                ]
+            },
+            {
+                "MSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 1602,
+                        "urx": 57,
+                        "ury": 3522
+                    }
+                ]
+            },
+            {
+                "MSMG4": [
+                    {
+                        "llx": 0,
+                        "lly": 2695,
+                        "urx": 57,
+                        "ury": 4616
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MSMG4014": {
+        "examples": [
+            {
+                "MSMG4": [
+                    {
+                        "llx": 5,
+                        "lly": 0,
+                        "urx": 61,
+                        "ury": 56
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true
+        ]
+    },
+    "RULE_MSMG5001": {
+        "examples": [
+            {
+                "MSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 1458,
+                        "urx": 56,
+                        "ury": 1514
+                    }
+                ]
+            },
+            {
+                "MSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 1176,
+                        "urx": 56,
+                        "ury": 1231
+                    }
+                ]
+            },
+            {
+                "MSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 1933,
+                        "urx": 55,
+                        "ury": 1989
+                    }
+                ]
+            },
+            {
+                "MSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 1555,
+                        "urx": 55,
+                        "ury": 1610
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MSMG5003": {
+        "examples": [
+            {
+                "MSMG5": [
+                    {
+                        "llx": 2684,
+                        "lly": 0,
+                        "urx": 2740,
+                        "ury": 1920
+                    }
+                ]
+            },
+            {
+                "MSMG5": [
+                    {
+                        "llx": 1907,
+                        "lly": 0,
+                        "urx": 1963,
+                        "ury": 1921
+                    }
+                ]
+            },
+            {
+                "MSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 1602,
+                        "urx": 57,
+                        "ury": 3522
+                    }
+                ]
+            },
+            {
+                "MSMG5": [
+                    {
+                        "llx": 0,
+                        "lly": 2557,
+                        "urx": 57,
+                        "ury": 4478
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MSMG5014": {
+        "examples": [
+            {
+                "MSMG5": [
+                    {
+                        "llx": 5,
+                        "lly": 4,
+                        "urx": 61,
+                        "ury": 60
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true
+        ]
+    },
+    "RULE_VG1001a": {
+        "examples": [
+            {
+                "VG1": [
+                    {
+                        "llx": 0,
+                        "lly": 2830,
+                        "urx": 112,
+                        "ury": 2942
+                    }
+                ]
+            },
+            {
+                "VG1": [
+                    {
+                        "llx": 2019,
+                        "lly": 0,
+                        "urx": 2131,
+                        "ury": 113
+                    }
+                ]
+            },
+            {
+                "VG1": [
+                    {
+                        "llx": 281,
+                        "lly": 0,
+                        "urx": 393,
+                        "ury": 111
+                    }
+                ]
+            },
+            {
+                "VG1": [
+                    {
+                        "llx": 0,
+                        "lly": 3966,
+                        "urx": 113,
+                        "ury": 4078
+                    }
+                ]
+            },
+            {
+                "VG1": [
+                    {
+                        "llx": 0,
+                        "lly": 2100,
+                        "urx": 113,
+                        "ury": 2213
+                    }
+                ]
+            },
+            {
+                "VG1": [
+                    {
+                        "llx": 0,
+                        "lly": 2837,
+                        "urx": 113,
+                        "ury": 2948
+                    }
+                ]
+            },
+            {
+                "VG1": [
+                    {
+                        "llx": 0,
+                        "lly": 2951,
+                        "urx": 111,
+                        "ury": 3063
+                    }
+                ]
+            },
+            {
+                "VG1": [
+                    {
+                        "llx": 0,
+                        "lly": 4360,
+                        "urx": 111,
+                        "ury": 4473
+                    }
+                ]
+            },
+            {
+                "VG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1251,
+                        "urx": 111,
+                        "ury": 1362
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MG1001": {
+        "examples": [
+            {
+                "MG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1682,
+                        "urx": 112,
+                        "ury": 1794
+                    }
+                ]
+            },
+            {
+                "MG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1461,
+                        "urx": 111,
+                        "ury": 1573
+                    }
+                ]
+            },
+            {
+                "MG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1988,
+                        "urx": 112,
+                        "ury": 2099
+                    }
+                ]
+            },
+            {
+                "MG1": [
+                    {
+                        "llx": 0,
+                        "lly": 1835,
+                        "urx": 111,
+                        "ury": 1946
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MG1003": {
+        "examples": [
+            {
+                "MG1": [
+                    {
+                        "llx": 1871,
+                        "lly": 0,
+                        "urx": 1983,
+                        "ury": 3840
+                    }
+                ]
+            },
+            {
+                "MG1": [
+                    {
+                        "llx": 2019,
+                        "lly": 0,
+                        "urx": 2131,
+                        "ury": 3841
+                    }
+                ]
+            },
+            {
+                "MG1": [
+                    {
+                        "llx": 0,
+                        "lly": 39,
+                        "urx": 113,
+                        "ury": 3879
+                    }
+                ]
+            },
+            {
+                "MG1": [
+                    {
+                        "llx": 0,
+                        "lly": 735,
+                        "urx": 113,
+                        "ury": 4576
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    "RULE_MG1013": {
+        "examples": [
+            {
+                "MG1": [
+                    {
+                        "llx": 3747,
+                        "lly": 1,
+                        "urx": 3859,
+                        "ury": 113
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true
+        ]
+    },
+    "RULE_MG2001": {
+        "examples": [
+            {
+                "MG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1682,
+                        "urx": 112,
+                        "ury": 1794
+                    }
+                ]
+            },
+            {
+                "MG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1456,
+                        "urx": 112,
+                        "ury": 1567
+                    }
+                ]
+            },
+            {
+                "MG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1989,
+                        "urx": 111,
+                        "ury": 2101
+                    }
+                ]
+            },
+            {
+                "MG2": [
+                    {
+                        "llx": 0,
+                        "lly": 1835,
+                        "urx": 111,
+                        "ury": 1946
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "RULE_MG2003": {
+        "examples": [
+            {
+                "MG2": [
+                    {
+                        "llx": 867,
+                        "lly": 0,
+                        "urx": 979,
+                        "ury": 3840
+                    }
+                ]
+            },
+            {
+                "MG2": [
+                    {
+                        "llx": 0,
+                        "lly": 495,
+                        "urx": 113,
+                        "ury": 4335
+                    }
+                ]
+            },
+            {
+                "MG2": [
+                    {
+                        "llx": 2019,
+                        "lly": 0,
+                        "urx": 2131,
+                        "ury": 3841
+                    }
+                ]
+            },
+            {
+                "MG2": [
+                    {
+                        "llx": 0,
+                        "lly": 197,
+                        "urx": 113,
+                        "ury": 4038
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            true,
+            false,
+            true
+        ]
+    },
+    "RULE_MG2013": {
+        "examples": [
+            {
+                "MG2": [
+                    {
+                        "llx": 0,
+                        "lly": 5,
+                        "urx": 112,
+                        "ury": 117
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true
+        ]
+    }
+}

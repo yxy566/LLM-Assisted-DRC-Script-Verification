@@ -1,0 +1,1245 @@
+{
+    "ACT": {
+        "constraints": [
+            "obj1 = RectangleClass('ACT_1')\nobj2 = RectangleClass('ACT_2')\nspace_cond = And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect))\ndrc_rule_constraints = Implies(space_cond, define_vertical_spacing_rule(obj1, obj2, 62))",
+            "obj1 = RectangleClass('ACT_1')\nobj2 = RectangleClass('ACT_2')\nspace_rule = Or(\n    Or(obj1.llx - obj2.urx == 32, obj2.llx - obj1.urx == 32), \n    Or(obj1.llx - obj2.urx == 96, obj2.llx - obj1.urx == 96), \n    define_horizontal_spacing_rule(obj1, obj2, 160))\ndrc_rule_constraints = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), space_rule)"
+        ],
+        "rule_name": [
+            "RULE_ACT003",
+            "RULE_ACT005"
+        ],
+        "rules": [
+            "Minimum vertical spacing of ACT is 62nm",
+            "Horizontal spacing of ACT  must be 32nm, 96nm or >= 160nm"
+        ]
+    },
+    "ACT,NW": {
+        "constraints": [
+            "obj1 = RectangleClass('NW')\nobj2 = RectangleClass('ACT')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 31))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 31))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_ACT007A"
+        ],
+        "rules": [
+            "Minimum spacing of NW to ACT is 31nm"
+        ]
+    },
+    "GATEA": {
+        "constraints": [
+            "obj1 = RectangleClass('GATEA_1')\nobj2 = RectangleClass('GATEA_2')\ndrc_rule_constraints = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 128))"
+        ],
+        "rule_name": [
+            "RULE_GATE002A"
+        ],
+        "rules": [
+            "Min horizontal pitch of GATE [A] is 128 nm"
+        ]
+    },
+    "GATEB": {
+        "constraints": [
+            "obj1 = RectangleClass('GATEB_1')\nobj2 = RectangleClass('GATEB_2')\ndrc_rule_constraints = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), obj1.center_x - obj2.center_x >= 128)"
+        ],
+        "rule_name": [
+            "RULE_GATE002B"
+        ],
+        "rules": [
+            "Min horizontal pitch of GATE [B] is 128 nm"
+        ]
+    },
+    "GATEA,GATEB": {
+        "constraints": [
+            "obj1 = RectangleClass('GATEA')\nobj2 = RectangleClass('GATEB')\nspace_cond = And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect))\ndrc_rule_constraints = Implies(space_cond, define_horizontal_spacing_rule(obj1, obj2, 44))"
+        ],
+        "rule_name": [
+            "RULE_GATE003"
+        ],
+        "rules": [
+            "Minimum horizontal spacing of GATE[A] and GATE[B] is 44 nm"
+        ]
+    },
+    "GATEAB": {
+        "constraints": [
+            "obj1 = RectangleClass('GATEAB_1')\nobj2 = RectangleClass('GATEAB_2')\ndrc_rule_constraints = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), Abs(obj1.center_x - obj2.center_x) >= 64)",
+            "obj1 = RectangleClass('GATEAB_1')\nobj2 = RectangleClass('GATEAB_2')\nspace_cond = And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect))\ndrc_rule_constraints = Implies(space_cond, define_horizontal_spacing_rule(obj1, obj2, 44))"
+        ],
+        "rule_name": [
+            "RULE_GATE002AB",
+            "RULE_GATE003AB"
+        ],
+        "rules": [
+            "Min horizontal pitch of GATE [AB] is 64nm",
+            "Minimum horizontal spacing of GATE[AB] is 44 nm"
+        ]
+    },
+    "GATEA,VTL": {
+        "constraints": [
+            "obj1 = RectangleClass('GATEA')\nobj2 = RectangleClass('VTL')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_VTL004A"
+        ],
+        "rules": [
+            "Minimum spacing of GATEA to VTL is 44nm"
+        ]
+    },
+    "GATEB,VTL": {
+        "constraints": [
+            "obj1 = RectangleClass('GATEB')\nobj2 = RectangleClass('VTL')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_VTL004B"
+        ],
+        "rules": [
+            "Minimum spacing of GATEB to VTL is 44nm"
+        ]
+    },
+    "GATEA,VTH": {
+        "constraints": [
+            "obj1 = RectangleClass('GATEA')\nobj2 = RectangleClass('VTH')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_VTH004A"
+        ],
+        "rules": [
+            "Minimum spacing of GATEA to VTH is 44nm"
+        ]
+    },
+    "GATEB,VTH": {
+        "constraints": [
+            "obj1 = RectangleClass('GATEB')\nobj2 = RectangleClass('VTH')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_VTH004B"
+        ],
+        "rules": [
+            "Minimum spacing of GATEB to VTH is 44nm"
+        ]
+    },
+    "NIM": {
+        "constraints": [
+            "obj1 = RectangleClass('NIM_1')\nobj2 = RectangleClass('NIM_2')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 128))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 128))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_NIM001B"
+        ],
+        "rules": [
+            "Minimum Spacing of NIM is 128nm"
+        ]
+    },
+    "PIM": {
+        "constraints": [
+            "obj1 = RectangleClass('PIM_1')\nobj2 = RectangleClass('PIM_2')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 128))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 128))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_PIM001B"
+        ],
+        "rules": [
+            "Minimum Spacing of PIM is 128nm"
+        ]
+    },
+    "ACT,NIM,PIM": {
+        "constraints": [
+            "obj1 = RectangleClass('NIM')\nobj2 = RectangleClass('ACT')\nobj3 = RectangleClass('PIM')\nenclosed = define_inside_rule(obj2.rect, obj3.rect)\nspace_rule_1 = Implies(And(enclosed, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 30))\nspace_rule_2 = Implies(And(enclosed, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 30))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('PIM')\nobj2 = RectangleClass('ACT')\nobj3 = RectangleClass('NIM')\ninside_cond = define_inside_rule(obj2.rect, obj3.rect)\nspace_rule_1 = Implies(And(inside_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 30))\nspace_rule_2 = Implies(And(inside_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 30))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_NIM005",
+            "RULE_PIM005"
+        ],
+        "rules": [
+            "Minimum spacing of NIM to (ACT enclosed by PIM) is 0.030 um",
+            "Minimum spacing of PIM to (ACT enclosed by NIM) is 0.030 um"
+        ]
+    },
+    "AIL1": {
+        "constraints": [
+            "obj1 = RectangleClass('AIL1_1')\nobj2 = RectangleClass('AIL1_2')\ndrc_rule_constraints = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))",
+            "obj1 = RectangleClass('AIL1_1')\nobj2 = RectangleClass('AIL1_2')\nspace_cond = And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect))\ndrc_rule_constraints = Implies(space_cond, define_vertical_spacing_rule(obj1, obj2, 62))"
+        ],
+        "rule_name": [
+            "RULE_AIL1002",
+            "RULE_AIL1006"
+        ],
+        "rules": [
+            "Horizontal spacing of AIL1 is 36nm",
+            "Minimum Vertical spacing of AIL1 is 62nm"
+        ]
+    },
+    "AIL1,GATEA": {
+        "constraints": [
+            "obj1 = RectangleClass('AIL1')\nobj2 = RectangleClass('GATEA')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 8))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 8))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_AIL1003A"
+        ],
+        "rules": [
+            "Minimum spacing of AIL1 to GATE[A] is 8nm"
+        ]
+    },
+    "AIL1,GATEB": {
+        "constraints": [
+            "obj1 = RectangleClass('AIL1')\nobj2 = RectangleClass('GATEB')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 8))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 8))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_AIL1003B"
+        ],
+        "rules": [
+            "Minimum spacing of AIL1 to GATE[B] is 8nm"
+        ]
+    },
+    "AIL2": {
+        "constraints": [
+            "obj1 = RectangleClass('AIL2_1')\nobj2 = RectangleClass('AIL2_2')\nhorizontal_spacing_rule = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 40))\ndrc_rule_constraints = horizontal_spacing_rule",
+            "obj1 = RectangleClass('AIL2_1')\nobj2 = RectangleClass('AIL2_2')\nspace_cond = And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect))\ndrc_rule_constraints = Implies(space_cond, define_vertical_spacing_rule(obj1, obj2, 62))"
+        ],
+        "rule_name": [
+            "RULE_AIL2002",
+            "RULE_AIL2007"
+        ],
+        "rules": [
+            "Horizontal spacing of AIL2 is 40nm",
+            "Vertical spacing of AIL2 is 62nm"
+        ]
+    },
+    "AIL2,GATEA": {
+        "constraints": [
+            "obj1 = RectangleClass('AIL2')\nobj2 = RectangleClass('GATEA')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 2))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 2))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_AIL2003A"
+        ],
+        "rules": [
+            "Minimum spacing between AIL2 and GATE[A] is 2nm"
+        ]
+    },
+    "AIL2,GATEB": {
+        "constraints": [
+            "obj1 = RectangleClass('AIL2')\nobj2 = RectangleClass('GATEB')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 2))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 2))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_AIL2003B"
+        ],
+        "rules": [
+            "Minimum spacing between AIL2 and GATE[B] is 2nm"
+        ]
+    },
+    "AIL1,AIL2": {
+        "constraints": [
+            "obj1 = RectangleClass('AIL1')\nobj2 = RectangleClass('AIL2')\ndrc_rule_constraints = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 16))",
+            "obj1 = RectangleClass('AIL1')\nobj2 = RectangleClass('AIL2')\nspace_cond = And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect))\ndrc_rule_constraints = Implies(space_cond, define_vertical_spacing_rule(obj1, obj2, 16))"
+        ],
+        "rule_name": [
+            "RULE_AIL2009",
+            "RULE_AIL2010"
+        ],
+        "rules": [
+            "Minimum horizontal spacing of AIL1 and AIL2 is 16nm",
+            "Minimum vertical spacing of AIL1 and AIL2 is 16nm"
+        ]
+    },
+    "GIL": {
+        "constraints": [
+            "obj1 = RectangleClass('GIL_1')\nobj2 = RectangleClass('GIL_2')\nspace_cond = And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect))\ndrc_rule_constraints = Implies(space_cond, define_vertical_spacing_rule(obj1, obj2, 32))",
+            "obj1 = RectangleClass('GIL_1')\nobj2 = RectangleClass('GIL_2')\nspace_cond = And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect))\ndrc_rule_constraints = Implies(space_cond, define_horizontal_spacing_rule(obj1, obj2, 40))"
+        ],
+        "rule_name": [
+            "RULE_GIL003",
+            "RULE_GIL004"
+        ],
+        "rules": [
+            "Minimum vertical spacing of GIL is 32nm",
+            "Minimum horizontal spacing of GIL is 40nm"
+        ]
+    },
+    "ACT,GIL": {
+        "constraints": [
+            "obj1 = RectangleClass('GIL')\nobj2 = RectangleClass('ACT')\nspace_cond = And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect))\ndrc_rule_constraints = Implies(space_cond, define_vertical_spacing_rule(obj1, obj2, 6))"
+        ],
+        "rule_name": [
+            "RULE_GIL005"
+        ],
+        "rules": [
+            "Minimum vertical spacing of GIL to ACT is 6nm"
+        ]
+    },
+    "M1A": {
+        "constraints": [
+            "obj1 = RectangleClass('M1A_1')\nobj2 = RectangleClass('M1A_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A_1')\nobj2 = RectangleClass('M1A_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A_1')\nobj2 = RectangleClass('M1A_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A_1')\nobj2 = RectangleClass('M1A_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A_1')\nobj2 = RectangleClass('M1A_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A_1')\nobj2 = RectangleClass('M1A_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A_1')\nobj2 = RectangleClass('M1A_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A_1')\nobj2 = RectangleClass('M1A_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = space_rule_1"
+        ],
+        "rule_name": [
+            "RULE_M1004A",
+            "RULE_M1008A",
+            "RULE_M1009A",
+            "RULE_M1010A",
+            "RULE_M1011A",
+            "RULE_M1012A",
+            "RULE_M1013A",
+            "RULE_M1014A"
+        ],
+        "rules": [
+            "M1A end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of M1A when M1A is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of M1A when M1A is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of M1A when M1A is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of M1A when M1A is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of M1A when M1A is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of M1A when M1A is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of M1A when M1A is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "M1B": {
+        "constraints": [
+            "obj1 = RectangleClass('M1B_1')\nobj2 = RectangleClass('M1B_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B_1')\nobj2 = RectangleClass('M1B_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nvertical_space_rule = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\nhorizontal_space_rule = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = vertical_space_rule",
+            "obj1 = RectangleClass('M1B_1')\nobj2 = RectangleClass('M1B_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B_1')\nobj2 = RectangleClass('M1B_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B_1')\nobj2 = RectangleClass('M1B_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B_1')\nobj2 = RectangleClass('M1B_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B_1')\nobj2 = RectangleClass('M1B_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('M1B_1')\nobj2 = RectangleClass('M1B_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = space_rule_1"
+        ],
+        "rule_name": [
+            "RULE_M1004B",
+            "RULE_M1008B",
+            "RULE_M1009B",
+            "RULE_M1010B",
+            "RULE_M1011B",
+            "RULE_M1012B",
+            "RULE_M1013B",
+            "RULE_M1014B"
+        ],
+        "rules": [
+            "M1B end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of M1B when M1B is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of M1B when M1B is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of M1B when M1B is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of M1B when M1B is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of M1B when M1B is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of M1B when M1B is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of M1B when M1B is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "M1A,M1B": {
+        "constraints": [
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nsize_cond2 = And(obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B')\nobj2 = RectangleClass('M1A')\nsize_cond2 = And(obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nsize_cond = And(obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nsize_cond = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B')\nobj2 = RectangleClass('M1A')\nsize_cond1 = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nsize_cond2 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B')\nobj2 = RectangleClass('M1A')\nsize_cond2 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nsize_cond2 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B')\nobj2 = RectangleClass('M1A')\nsize_cond2 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nsize_cond = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B')\nobj2 = RectangleClass('M1A')\nsize_cond = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1A')\nobj2 = RectangleClass('M1B')\nsize_cond2 = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1B')\nobj2 = RectangleClass('M1A')\nsize_cond2 = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = space_rule_1"
+        ],
+        "rule_name": [
+            "RULE_M1006AB",
+            "RULE_M1007AB",
+            "RULE_M1015A",
+            "RULE_M1015B",
+            "RULE_M1016A",
+            "RULE_M1016B",
+            "RULE_M1017A",
+            "RULE_M1017B",
+            "RULE_M1018A",
+            "RULE_M1018B",
+            "RULE_M1019A",
+            "RULE_M1019B",
+            "RULE_M1020A",
+            "RULE_M1020B",
+            "RULE_M1021A",
+            "RULE_M1021B"
+        ],
+        "rules": [
+            "min spacing of M1A to M1B 36nm",
+            "End-of-line spacing of M1A to M1B (EOL edge defined as edge < 32nm) is 44nm",
+            "Minimum spacing of M1A to M1B when M1B is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of M1B to M1A when M1A is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of M1A to M1B when M1B is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of M1B to M1A when M1A is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of M1A to M1B when M1B is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of M1B to M1A when M1A is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of M1A to M1B when M1B is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of M1B to M1A when M1A is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of M1A to M1B when M1B is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of M1B to M1A when M1A is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of M1A to M1B when M1B is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of M1B to M1A when M1A is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of M1A to M1B when M1B is wider than 600nm and longer than 2400nm is 400nm",
+            "Minimum spacing of M1B to M1A when M1A is wider than 600nm and longer than 2400nm is 400nm"
+        ]
+    },
+    "M1": {
+        "constraints": [
+            "obj1 = RectangleClass('M1_1')\nobj2 = RectangleClass('M1_2')\nspace_rule_1 = Implies(And(define_outside_rule(obj1.rect, obj2.rect), define_vertical_overlap_rule(obj1, obj2)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_outside_rule(obj1.rect, obj2.rect), define_horizontal_overlap_rule(obj1, obj2)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('M1_1')\nobj2 = RectangleClass('M1_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = space_rule_1"
+        ],
+        "rule_name": [
+            "RULE_M1006",
+            "RULE_M1007"
+        ],
+        "rules": [
+            "min spacing of M1 to M1 36nm",
+            "End-of-line spacing of M1 to M1 (EOL edge defined as edge < 32nm) is 44nm"
+        ]
+    },
+    "MINT1A": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT1A_1')\nobj2 = RectangleClass('MINT1A_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1A_1')\nobj2 = RectangleClass('MINT1A_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1A_1')\nobj2 = RectangleClass('MINT1A_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1A_1')\nobj2 = RectangleClass('MINT1A_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1A_1')\nobj2 = RectangleClass('MINT1A_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A_1')\nobj2 = RectangleClass('MINT1A_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800)\nsize_cond2 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A_1')\nobj2 = RectangleClass('MINT1A_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A_1')\nobj2 = RectangleClass('MINT1A_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT1004A",
+            "RULE_MINT1008A",
+            "RULE_MINT1009A",
+            "RULE_MINT1010A",
+            "RULE_MINT1011A",
+            "RULE_MINT1012A",
+            "RULE_MINT1013A",
+            "RULE_MINT1014A"
+        ],
+        "rules": [
+            "MINT1A end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT1A when MINT1A is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT1A when MINT1A is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT1A when MINT1A is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT1A when MINT1A is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT1A when MINT1A is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT1A when MINT1A is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT1A when MINT1A is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT1B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT1B_1')\nobj2 = RectangleClass('MINT1B_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1B_1')\nobj2 = RectangleClass('MINT1B_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1B_1')\nobj2 = RectangleClass('MINT1B_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1B_1')\nobj2 = RectangleClass('MINT1B_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1B_1')\nobj2 = RectangleClass('MINT1B_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1B_1')\nobj2 = RectangleClass('MINT1B_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1B_1')\nobj2 = RectangleClass('MINT1B_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1B_1')\nobj2 = RectangleClass('MINT1B_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT1004B",
+            "RULE_MINT1008B",
+            "RULE_MINT1009B",
+            "RULE_MINT1010B",
+            "RULE_MINT1011B",
+            "RULE_MINT1012B",
+            "RULE_MINT1013B",
+            "RULE_MINT1014B"
+        ],
+        "rules": [
+            "MINT1B end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT1B when MINT1B is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT1B when MINT1B is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT1B when MINT1B is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT1B when MINT1B is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT1B when MINT1B is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT1B when MINT1B is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT1B when MINT1B is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT1A,MINT1B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nsize_cond1 = And(obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nsize_cond = And(obj1.width > 32, obj1.length > 240)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nsize_cond2 = And(obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1B')\nobj2 = RectangleClass('MINT1A')\nsize_cond2 = And(obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nsize_cond = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1B')\nobj2 = RectangleClass('MINT1A')\nsize_cond2 = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nsize_cond2 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1B')\nobj2 = RectangleClass('MINT1A')\nsize_cond = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nsize_cond1 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1B')\nobj2 = RectangleClass('MINT1A')\nsize_cond2 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nsize_cond2 = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1B')\nobj2 = RectangleClass('MINT1A')\nsize_cond1 = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nsize_cond = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT1A')\nobj2 = RectangleClass('MINT1B')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT1006AB",
+            "RULE_MINT1007AB",
+            "RULE_MINT1015A",
+            "RULE_MINT1015B",
+            "RULE_MINT1016A",
+            "RULE_MINT1016B",
+            "RULE_MINT1017A",
+            "RULE_MINT1017B",
+            "RULE_MINT1018A",
+            "RULE_MINT1018B",
+            "RULE_MINT1019A",
+            "RULE_MINT1019B",
+            "RULE_MINT1020A",
+            "RULE_MINT1020B",
+            "RULE_MINT1021A",
+            "RULE_MINT1021B"
+        ],
+        "rules": [
+            "min spacing of MINT1A to MINT1B 36nm",
+            "End-of-line spacing of MINT1A to MINT1B (EOL edge defined as edge < 32nm) is 44nm",
+            "Minimum spacing of MINT1A to MINT1B when MINT1B is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT1B to MINT1A when MINT1A is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT1A to MINT1B when MINT1B is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT1B to MINT1A when MINT1A is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT1A to MINT1B when MINT1B is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT1B to MINT1A when MINT1A is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT1A to MINT1B when MINT1B is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT1B to MINT1A when MINT1A is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT1A to MINT1B when MINT1B is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT1B to MINT1A when MINT1A is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT1A to MINT1B when MINT1B is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT1B to MINT1A when MINT1A is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT1A to MINT1B when MINT1B is wider than 600nm and longer than 2400nm is 400nm",
+            "Minimum spacing of MINT1B to MINT1A when MINT1A is wider than 600nm and longer than 2400nm is 400nm"
+        ]
+    },
+    "MINT1": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT1_1')\nobj2 = RectangleClass('MINT1_2')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = space_rule_1",
+            "obj1 = RectangleClass('MINT1_1')\nobj2 = RectangleClass('MINT1_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = space_rule_1"
+        ],
+        "rule_name": [
+            "RULE_MINT1006",
+            "RULE_MINT1007"
+        ],
+        "rules": [
+            "min spacing of MINT1 to MINT1 36nm",
+            "End-of-line spacing of MINT1 to MINT1 (EOL edge defined as edge < 32nm) is 44nm"
+        ]
+    },
+    "MINT2A": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT2A_1')\nobj2 = RectangleClass('MINT2A_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A_1')\nobj2 = RectangleClass('MINT2A_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A_1')\nobj2 = RectangleClass('MINT2A_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A_1')\nobj2 = RectangleClass('MINT2A_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A_1')\nobj2 = RectangleClass('MINT2A_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A_1')\nobj2 = RectangleClass('MINT2A_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A_1')\nobj2 = RectangleClass('MINT2A_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A_1')\nobj2 = RectangleClass('MINT2A_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT2004A",
+            "RULE_MINT2008A",
+            "RULE_MINT2009A",
+            "RULE_MINT2010A",
+            "RULE_MINT2011A",
+            "RULE_MINT2012A",
+            "RULE_MINT2013A",
+            "RULE_MINT2014A"
+        ],
+        "rules": [
+            "MINT2A end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT2A when MINT2A is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT2A when MINT2A is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT2A when MINT2A is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT2A when MINT2A is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT2A when MINT2A is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT2A when MINT2A is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT2A when MINT2A is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT2B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT2B_1')\nobj2 = RectangleClass('MINT2B_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B_1')\nobj2 = RectangleClass('MINT2B_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B_1')\nobj2 = RectangleClass('MINT2B_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B_1')\nobj2 = RectangleClass('MINT2B_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B_1')\nobj2 = RectangleClass('MINT2B_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B_1')\nobj2 = RectangleClass('MINT2B_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B_1')\nobj2 = RectangleClass('MINT2B_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B_1')\nobj2 = RectangleClass('MINT2B_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400)\nsize_cond2 = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(And(size_cond1, size_cond2), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(And(size_cond1, size_cond2), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT2004B",
+            "RULE_MINT2008B",
+            "RULE_MINT2009B",
+            "RULE_MINT2010B",
+            "RULE_MINT2011B",
+            "RULE_MINT2012B",
+            "RULE_MINT2013B",
+            "RULE_MINT2014B"
+        ],
+        "rules": [
+            "MINT2B end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT2B when MINT2B is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT2B when MINT2B is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT2B when MINT2B is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT2B when MINT2B is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT2B when MINT2B is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT2B when MINT2B is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT2B when MINT2B is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT2A,MINT2B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nsize_cond = And(obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B')\nobj2 = RectangleClass('MINT2A')\nsize_cond = And(obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nsize_cond1 = And(obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nsize_cond = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B')\nobj2 = RectangleClass('MINT2A')\nsize_cond2 = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nsize_cond = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B')\nobj2 = RectangleClass('MINT2A')\nsize_cond1 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nsize_cond2 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2B')\nobj2 = RectangleClass('MINT2A')\nsize_cond = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nsize_cond1 = And(obj2.width > 320, obj2.length > 2400)\nspacing_cond_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspacing_cond_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(spacing_cond_1, spacing_cond_2)",
+            "obj1 = RectangleClass('MINT2B')\nobj2 = RectangleClass('MINT2A')\nsize_cond = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nsize_cond = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2A')\nobj2 = RectangleClass('MINT2B')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT2006AB",
+            "RULE_MINT2007AB",
+            "RULE_MINT2015A",
+            "RULE_MINT2015B",
+            "RULE_MINT2016A",
+            "RULE_MINT2016B",
+            "RULE_MINT2017A",
+            "RULE_MINT2017B",
+            "RULE_MINT2018A",
+            "RULE_MINT2018B",
+            "RULE_MINT2019A",
+            "RULE_MINT2019B",
+            "RULE_MINT2020A",
+            "RULE_MINT2020B",
+            "RULE_MINT2021A",
+            "RULE_MINT2021B"
+        ],
+        "rules": [
+            "min spacing of MINT2A to MINT2B 36nm",
+            "End-of-line spacing of MINT2A to MINT2B (EOL edge defined as edge < 32nm) is 44nm",
+            "Minimum spacing of MINT2A to MINT2B when MINT2B is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT2B to MINT2A when MINT2A is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT2A to MINT2B when MINT2B is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT2B to MINT2A when MINT2A is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT2A to MINT2B when MINT2B is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT2B to MINT2A when MINT2A is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT2A to MINT2B when MINT2B is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT2B to MINT2A when MINT2A is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT2A to MINT2B when MINT2B is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT2B to MINT2A when MINT2A is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT2A to MINT2B when MINT2B is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT2B to MINT2A when MINT2A is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT2A to MINT2B when MINT2B is wider than 600nm and longer than 2400nm is 400nm",
+            "Minimum spacing of MINT2B to MINT2A when MINT2A is wider than 600nm and longer than 2400nm is 400nm"
+        ]
+    },
+    "MINT2": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT2_1')\nobj2 = RectangleClass('MINT2_2')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT2_1')\nobj2 = RectangleClass('MINT2_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT2006",
+            "RULE_MINT2007"
+        ],
+        "rules": [
+            "min spacing of MINT2 to MINT2 36nm",
+            "End-of-line spacing of MINT2 to MINT2 (EOL edge defined as edge < 32nm) is 44nm"
+        ]
+    },
+    "MINT3A": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT3A_1')\nobj2 = RectangleClass('MINT3A_2')\nspace_rule_1 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A_1')\nobj2 = RectangleClass('MINT3A_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A_1')\nobj2 = RectangleClass('MINT3A_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A_1')\nobj2 = RectangleClass('MINT3A_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A_1')\nobj2 = RectangleClass('MINT3A_2')\nsize_cond = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A_1')\nobj2 = RectangleClass('MINT3A_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A_1')\nobj2 = RectangleClass('MINT3A_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A_1')\nobj2 = RectangleClass('MINT3A_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT3004A",
+            "RULE_MINT3008A",
+            "RULE_MINT3009A",
+            "RULE_MINT3010A",
+            "RULE_MINT3011A",
+            "RULE_MINT3012A",
+            "RULE_MINT3013A",
+            "RULE_MINT3014A"
+        ],
+        "rules": [
+            "MINT3A end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT3A when MINT3A is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT3A when MINT3A is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT3A when MINT3A is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT3A when MINT3A is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT3A when MINT3A is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT3A when MINT3A is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT3A when MINT3A is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT3B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT3B_1')\nobj2 = RectangleClass('MINT3B_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B_1')\nobj2 = RectangleClass('MINT3B_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B_1')\nobj2 = RectangleClass('MINT3B_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B_1')\nobj2 = RectangleClass('MINT3B_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B_1')\nobj2 = RectangleClass('MINT3B_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B_1')\nobj2 = RectangleClass('MINT3B_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B_1')\nobj2 = RectangleClass('MINT3B_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B_1')\nobj2 = RectangleClass('MINT3B_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT3004B",
+            "RULE_MINT3008B",
+            "RULE_MINT3009B",
+            "RULE_MINT3010B",
+            "RULE_MINT3011B",
+            "RULE_MINT3012B",
+            "RULE_MINT3013B",
+            "RULE_MINT3014B"
+        ],
+        "rules": [
+            "MINT3B end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT3B when MINT3B is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT3B when MINT3B is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT3B when MINT3B is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT3B when MINT3B is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT3B when MINT3B is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT3B when MINT3B is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT3B when MINT3B is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT3A,MINT3B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond1 = And(obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond2 = And(obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond = And(obj1.width > 64, obj1.length > 480)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond1 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B')\nobj2 = RectangleClass('MINT3A')\nsize_cond2 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond2 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B')\nobj2 = RectangleClass('MINT3A')\nsize_cond1 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B')\nobj2 = RectangleClass('MINT3A')\nsize_cond = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3A')\nobj2 = RectangleClass('MINT3B')\nsize_cond2 = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3B')\nobj2 = RectangleClass('MINT3A')\nsize_cond = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT3006AB",
+            "RULE_MINT3007AB",
+            "RULE_MINT3015A",
+            "RULE_MINT3015B",
+            "RULE_MINT3016A",
+            "RULE_MINT3016B",
+            "RULE_MINT3017A",
+            "RULE_MINT3017B",
+            "RULE_MINT3018A",
+            "RULE_MINT3018B",
+            "RULE_MINT3019A",
+            "RULE_MINT3019B",
+            "RULE_MINT3020A",
+            "RULE_MINT3020B",
+            "RULE_MINT3021A",
+            "RULE_MINT3021B"
+        ],
+        "rules": [
+            "min spacing of MINT3A to MINT3B 36nm",
+            "End-of-line spacing of MINT3A to MINT3B (EOL edge defined as edge < 32nm) is 44nm",
+            "Minimum spacing of MINT3A to MINT3B when MINT3B is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT3B to MINT3A when MINT3A is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT3A to MINT3B when MINT3B is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT3B to MINT3A when MINT3A is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT3A to MINT3B when MINT3B is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT3B to MINT3A when MINT3A is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT3A to MINT3B when MINT3B is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT3B to MINT3A when MINT3A is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT3A to MINT3B when MINT3B is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT3B to MINT3A when MINT3A is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT3A to MINT3B when MINT3B is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT3B to MINT3A when MINT3A is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT3A to MINT3B when MINT3B is wider than 600nm and longer than 2400nm is 400nm",
+            "Minimum spacing of MINT3B to MINT3A when MINT3A is wider than 600nm and longer than 2400nm is 400nm"
+        ]
+    },
+    "MINT3": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT3_1')\nobj2 = RectangleClass('MINT3_2')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT3_1')\nobj2 = RectangleClass('MINT3_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT3006",
+            "RULE_MINT3007"
+        ],
+        "rules": [
+            "min spacing of MINT3 to MINT3 36nm",
+            "End-of-line spacing of MINT3 to MINT3 (EOL edge defined as edge < 32nm) is 44nm"
+        ]
+    },
+    "MINT4A": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT4A_1')\nobj2 = RectangleClass('MINT4A_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A_1')\nobj2 = RectangleClass('MINT4A_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A_1')\nobj2 = RectangleClass('MINT4A_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A_1')\nobj2 = RectangleClass('MINT4A_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A_1')\nobj2 = RectangleClass('MINT4A_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A_1')\nobj2 = RectangleClass('MINT4A_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A_1')\nobj2 = RectangleClass('MINT4A_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A_1')\nobj2 = RectangleClass('MINT4A_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT4004A",
+            "RULE_MINT4008A",
+            "RULE_MINT4009A",
+            "RULE_MINT4010A",
+            "RULE_MINT4011A",
+            "RULE_MINT4012A",
+            "RULE_MINT4013A",
+            "RULE_MINT4014A"
+        ],
+        "rules": [
+            "MINT4A end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT4A when MINT4A is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT4A when MINT4A is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT4A when MINT4A is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT4A when MINT4A is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT4A when MINT4A is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT4A when MINT4A is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT4A when MINT4A is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT4B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT4B_1')\nobj2 = RectangleClass('MINT4B_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B_1')\nobj2 = RectangleClass('MINT4B_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B_1')\nobj2 = RectangleClass('MINT4B_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B_1')\nobj2 = RectangleClass('MINT4B_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B_1')\nobj2 = RectangleClass('MINT4B_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B_1')\nobj2 = RectangleClass('MINT4B_2')\nsize_cond = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B_1')\nobj2 = RectangleClass('MINT4B_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B_1')\nobj2 = RectangleClass('MINT4B_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT4004B",
+            "RULE_MINT4008B",
+            "RULE_MINT4009B",
+            "RULE_MINT4010B",
+            "RULE_MINT4011B",
+            "RULE_MINT4012B",
+            "RULE_MINT4013B",
+            "RULE_MINT4014B"
+        ],
+        "rules": [
+            "MINT4B end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT4B when MINT4B is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT4B when MINT4B is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT4B when MINT4B is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT4B when MINT4B is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT4B when MINT4B is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT4B when MINT4B is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT4B when MINT4B is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT4A,MINT4B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT4A')\nobj2 = RectangleClass('MINT4B')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A')\nobj2 = RectangleClass('MINT4B')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A')\nobj2 = RectangleClass('MINT4B')\nsize_cond2 = And(obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A')\nobj2 = RectangleClass('MINT4B')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A')\nobj2 = RectangleClass('MINT4B')\nsize_cond = And(obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B')\nobj2 = RectangleClass('MINT4A')\nsize_cond = And(obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A')\nobj2 = RectangleClass('MINT4B')\ncond2 = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B')\nobj2 = RectangleClass('MINT4A')\nsize_cond = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A_1')\nobj2 = RectangleClass('MINT4B_2')\nsize_cond2 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B')\nobj2 = RectangleClass('MINT4A')\nsize_cond1 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A')\nobj2 = RectangleClass('MINT4B')\nsize_cond2 = And(obj2.width > 240, obj2.height > 1800)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B')\nobj2 = RectangleClass('MINT4A')\nsize_cond = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A')\nobj2 = RectangleClass('MINT4B')\nsize_cond2 = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B')\nobj2 = RectangleClass('MINT4A')\nsize_cond = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4A')\nobj2 = RectangleClass('MINT4B')\nsize_cond2 = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4B')\nobj2 = RectangleClass('MINT4A')\nsize_cond = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT4006AB",
+            "RULE_MINT4007AB",
+            "RULE_MINT4015A",
+            "RULE_MINT4015B",
+            "RULE_MINT4016A",
+            "RULE_MINT4016B",
+            "RULE_MINT4017A",
+            "RULE_MINT4017B",
+            "RULE_MINT4018A",
+            "RULE_MINT4018B",
+            "RULE_MINT4019A",
+            "RULE_MINT4019B",
+            "RULE_MINT4020A",
+            "RULE_MINT4020B",
+            "RULE_MINT4021A",
+            "RULE_MINT4021B"
+        ],
+        "rules": [
+            "min spacing of MINT4A to MINT4B 36nm",
+            "End-of-line spacing of MINT4A to MINT4B (EOL edge defined as edge < 32nm) is 44nm",
+            "Minimum spacing of MINT4A to MINT4B when MINT4B is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT4B to MINT4A when MINT4A is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT4A to MINT4B when MINT4B is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT4B to MINT4A when MINT4A is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT4A to MINT4B when MINT4B is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT4B to MINT4A when MINT4A is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT4A to MINT4B when MINT4B is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT4B to MINT4A when MINT4A is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT4A to MINT4B when MINT4B is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT4B to MINT4A when MINT4A is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT4A to MINT4B when MINT4B is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT4B to MINT4A when MINT4A is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT4A to MINT4B when MINT4B is wider than 600nm and longer than 2400nm is 400nm",
+            "Minimum spacing of MINT4B to MINT4A when MINT4A is wider than 600nm and longer than 2400nm is 400nm"
+        ]
+    },
+    "MINT4": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT4_1')\nobj2 = RectangleClass('MINT4_2')\nspace_rule = define_horizontal_spacing_rule(obj1, obj2, 36)\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), space_rule)\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), space_rule)\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT4_1')\nobj2 = RectangleClass('MINT4_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT4006",
+            "RULE_MINT4007"
+        ],
+        "rules": [
+            "min spacing of MINT4 to MINT4 36nm",
+            "End-of-line spacing of MINT4 to MINT4 (EOL edge defined as edge < 32nm) is 44nm"
+        ]
+    },
+    "MINT5A": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT5A_1')\nobj2 = RectangleClass('MINT5A_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A_1')\nobj2 = RectangleClass('MINT5A_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A_1')\nobj2 = RectangleClass('MINT5A_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A_1')\nobj2 = RectangleClass('MINT5A_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A_1')\nobj2 = RectangleClass('MINT5A_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A_1')\nobj2 = RectangleClass('MINT5A_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A_1')\nobj2 = RectangleClass('MINT5A_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A_1')\nobj2 = RectangleClass('MINT5A_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT5004A",
+            "RULE_MINT5008A",
+            "RULE_MINT5009A",
+            "RULE_MINT5010A",
+            "RULE_MINT5011A",
+            "RULE_MINT5012A",
+            "RULE_MINT5013A",
+            "RULE_MINT5014A"
+        ],
+        "rules": [
+            "MINT5A end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT5A when MINT5A is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT5A when MINT5A is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT5A when MINT5A is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT5A when MINT5A is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT5A when MINT5A is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT5A when MINT5A is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT5A when MINT5A is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT5B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT5B_1')\nobj2 = RectangleClass('MINT5B_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B_1')\nobj2 = RectangleClass('MINT5B_2')\nsize_cond1 = And(obj1.width > 32, obj1.length > 240, obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 68))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 68))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B_1')\nobj2 = RectangleClass('MINT5B_2')\nsize_cond1 = And(obj1.width > 40, obj1.length > 240, obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 76))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 76))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B_1')\nobj2 = RectangleClass('MINT5B_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B_1')\nobj2 = RectangleClass('MINT5B_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B_1')\nobj2 = RectangleClass('MINT5B_2')\nsize_cond = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B_1')\nobj2 = RectangleClass('MINT5B_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B_1')\nobj2 = RectangleClass('MINT5B_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT5004B",
+            "RULE_MINT5008B",
+            "RULE_MINT5009B",
+            "RULE_MINT5010B",
+            "RULE_MINT5011B",
+            "RULE_MINT5012B",
+            "RULE_MINT5013B",
+            "RULE_MINT5014B"
+        ],
+        "rules": [
+            "MINT5B end-of-line spacing (end-of-line edge defined as edge < 32nm) is 68nm",
+            "Minimum spacing of MINT5B when MINT5B is wider than 32nm and longer than 240nm is 68nm",
+            "Minimum spacing of MINT5B when MINT5B is wider than 40nm and longer than 240nm is 76nm",
+            "Minimum spacing of MINT5B when MINT5B is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MINT5B when MINT5B is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MINT5B when MINT5B is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MINT5B when MINT5B is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MINT5B when MINT5B is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MINT5A,MINT5B": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT5A')\nobj2 = RectangleClass('MINT5B')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A')\nobj2 = RectangleClass('MINT5B')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A')\nobj2 = RectangleClass('MINT5B')\nsize_cond2 = And(obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B')\nobj2 = RectangleClass('MINT5A')\nsize_cond = And(obj2.width > 32, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A')\nobj2 = RectangleClass('MINT5B')\nsize_cond2 = And(obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B')\nobj2 = RectangleClass('MINT5A')\nsize_cond1 = And(obj2.width > 40, obj2.length > 240)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 50))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 50))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A')\nobj2 = RectangleClass('MINT5B')\nsize_cond2 = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B')\nobj2 = RectangleClass('MINT5A')\nsize_cond_obj2 = And(obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond_obj2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 60))\nspace_rule_2 = Implies(And(size_cond_obj2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 60))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A')\nobj2 = RectangleClass('MINT5B')\nsize_cond1 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B')\nobj2 = RectangleClass('MINT5A')\nsize_cond1 = And(obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 78))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 78))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A')\nobj2 = RectangleClass('MINT5B')\nsize_cond2 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond2, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B')\nobj2 = RectangleClass('MINT5A')\nsize_cond1 = And(obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 156))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 156))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A')\nobj2 = RectangleClass('MINT5B')\nsize_cond = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B')\nobj2 = RectangleClass('MINT5A')\nsize_cond = And(obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 200))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 200))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5A')\nobj2 = RectangleClass('MINT5B')\nsize_cond = And(obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))\nspace_rule_2 = Implies(And(size_cond, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 400))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5B')\nobj2 = RectangleClass('MINT5A')\nsize_cond2 = And(obj2.width > 600, obj2.length > 2400)\ndrc_rule_constraints = Implies(And(size_cond2, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 400))"
+        ],
+        "rule_name": [
+            "RULE_MINT5006AB",
+            "RULE_MINT5007AB",
+            "RULE_MINT5015A",
+            "RULE_MINT5015B",
+            "RULE_MINT5016A",
+            "RULE_MINT5016B",
+            "RULE_MINT5017A",
+            "RULE_MINT5017B",
+            "RULE_MINT5018A",
+            "RULE_MINT5018B",
+            "RULE_MINT5019A",
+            "RULE_MINT5019B",
+            "RULE_MINT5020A",
+            "RULE_MINT5020B",
+            "RULE_MINT5021A",
+            "RULE_MINT5021B"
+        ],
+        "rules": [
+            "min spacing of MINT5A to MINT5B 36nm",
+            "End-of-line spacing of MINT5A to MINT5B (EOL edge defined as edge < 32nm) is 44nm",
+            "Minimum spacing of MINT5A to MINT5B when MINT5B is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT5B to MINT5A when MINT5A is wider than 32nm and longer than 240nm is 44nm",
+            "Minimum spacing of MINT5A to MINT5B when MINT5B is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT5B to MINT5A when MINT5A is wider than 40nm and longer than 240nm is 50nm",
+            "Minimum spacing of MINT5A to MINT5B when MINT5B is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT5B to MINT5A when MINT5A is wider than 64nm and longer than 480nm is 60nm",
+            "Minimum spacing of MINT5A to MINT5B when MINT5B is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT5B to MINT5A when MINT5A is wider than 120nm and longer than 1200nm is 78nm",
+            "Minimum spacing of MINT5A to MINT5B when MINT5B is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT5B to MINT5A when MINT5A is wider than 240nm and longer than 1800nm is 156nm",
+            "Minimum spacing of MINT5A to MINT5B when MINT5B is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT5B to MINT5A when MINT5A is wider than 320nm and longer than 2400nm is 200nm",
+            "Minimum spacing of MINT5A to MINT5B when MINT5B is wider than 600nm and longer than 2400nm is 400nm",
+            "Minimum spacing of MINT5B to MINT5A when MINT5A is wider than 600nm and longer than 2400nm is 400nm"
+        ]
+    },
+    "MINT5": {
+        "constraints": [
+            "obj1 = RectangleClass('MINT5_1')\nobj2 = RectangleClass('MINT5_2')\nspace_rule_1 = Implies(And(define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 36))\nspace_rule_2 = Implies(And(define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 36))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MINT5_1')\nobj2 = RectangleClass('MINT5_2')\nspace_rule_1 = Implies(And(And(obj1.height < 32, obj2.height < 32), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 44))\nspace_rule_2 = Implies(And(And(obj1.width < 32, obj2.width < 32), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 44))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MINT5006",
+            "RULE_MINT5007"
+        ],
+        "rules": [
+            "min spacing of MINT5 to MINT5 36nm",
+            "End-of-line spacing of MINT5 to MINT5 (EOL edge defined as edge < 32nm) is 44nm"
+        ]
+    },
+    "MSMG1": {
+        "constraints": [
+            "obj1 = RectangleClass('MSMG1_1')\nobj2 = RectangleClass('MSMG1_2')\nspace_rule_1 = Implies(And(And(obj1.height < 64, obj2.height < 64), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 136))\nspace_rule_2 = Implies(And(And(obj1.width < 64, obj2.width < 64), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 136))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG1_1')\nobj2 = RectangleClass('MSMG1_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG1_1')\nobj2 = RectangleClass('MSMG1_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG1_1')\nobj2 = RectangleClass('MSMG1_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG1_1')\nobj2 = RectangleClass('MSMG1_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG1_1')\nobj2 = RectangleClass('MSMG1_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MSMG1004",
+            "RULE_MSMG1006",
+            "RULE_MSMG1007",
+            "RULE_MSMG1008",
+            "RULE_MSMG1009",
+            "RULE_MSMG1010"
+        ],
+        "rules": [
+            "MSMG1 end-of-line spacing (end-of-line edge defined as edge < 64nm) is 136nm",
+            "Minimum spacing of MSMG1 when MSMG1 is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MSMG1 when MSMG1 is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MSMG1 when MSMG1 is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MSMG1 when MSMG1 is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MSMG1 when MSMG1 is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MSMG2": {
+        "constraints": [
+            "obj1 = RectangleClass('MSMG2_1')\nobj2 = RectangleClass('MSMG2_2')\nspace_rule_1 = Implies(And(And(obj1.height < 64, obj2.height < 64), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 136))\nspace_rule_2 = Implies(And(And(obj1.width < 64, obj2.width < 64), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 136))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG2_1')\nobj2 = RectangleClass('MSMG2_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG2_1')\nobj2 = RectangleClass('MSMG2_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG2_1')\nobj2 = RectangleClass('MSMG2_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG2_1')\nobj2 = RectangleClass('MSMG2_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG2_1')\nobj2 = RectangleClass('MSMG2_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MSMG2004",
+            "RULE_MSMG2006",
+            "RULE_MSMG2007",
+            "RULE_MSMG2008",
+            "RULE_MSMG2009",
+            "RULE_MSMG2010"
+        ],
+        "rules": [
+            "MSMG2 end-of-line spacing (end-of-line edge defined as edge < 64nm) is 136nm",
+            "Minimum spacing of MSMG2 when MSMG2 is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MSMG2 when MSMG2 is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MSMG2 when MSMG2 is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MSMG2 when MSMG2 is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MSMG2 when MSMG2 is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MSMG3": {
+        "constraints": [
+            "obj1 = RectangleClass('MSMG3_1')\nobj2 = RectangleClass('MSMG3_2')\nspace_rule_1 = Implies(And(And(obj1.height < 64, obj2.height < 64), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 136))\nspace_rule_2 = Implies(And(And(obj1.width < 64, obj2.width < 64), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 136))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG3_1')\nobj2 = RectangleClass('MSMG3_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG3_1')\nobj2 = RectangleClass('MSMG3_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG3_1')\nobj2 = RectangleClass('MSMG3_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG3_1')\nobj2 = RectangleClass('MSMG3_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG3_1')\nobj2 = RectangleClass('MSMG3_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MSMG3004",
+            "RULE_MSMG3006",
+            "RULE_MSMG3007",
+            "RULE_MSMG3008",
+            "RULE_MSMG3009",
+            "RULE_MSMG3010"
+        ],
+        "rules": [
+            "MSMG3 end-of-line spacing (end-of-line edge defined as edge < 64nm) is 136nm",
+            "Minimum spacing of MSMG3 when MSMG3 is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MSMG3 when MSMG3 is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MSMG3 when MSMG3 is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MSMG3 when MSMG3 is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MSMG3 when MSMG3 is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MSMG4": {
+        "constraints": [
+            "obj1 = RectangleClass('MSMG4_1')\nobj2 = RectangleClass('MSMG4_2')\nspace_rule_1 = Implies(And(And(obj1.height < 64, obj2.height < 64), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 136))\nspace_rule_2 = Implies(And(And(obj1.width < 64, obj2.width < 64), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 136))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG4_1')\nobj2 = RectangleClass('MSMG4_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG4_1')\nobj2 = RectangleClass('MSMG4_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG4_1')\nobj2 = RectangleClass('MSMG4_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG4_1')\nobj2 = RectangleClass('MSMG4_2')\nsize_cond1 = And(obj1.width > 320, obj1.length >2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG4_1')\nobj2 = RectangleClass('MSMG4_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MSMG4004",
+            "RULE_MSMG4006",
+            "RULE_MSMG4007",
+            "RULE_MSMG4008",
+            "RULE_MSMG4009",
+            "RULE_MSMG4010"
+        ],
+        "rules": [
+            "MSMG4 end-of-line spacing (end-of-line edge defined as edge < 64nm) is 136nm",
+            "Minimum spacing of MSMG4 when MSMG4 is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MSMG4 when MSMG4 is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MSMG4 when MSMG4 is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MSMG4 when MSMG4 is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MSMG4 when MSMG4 is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MSMG5": {
+        "constraints": [
+            "obj1 = RectangleClass('MSMG5_1')\nobj2 = RectangleClass('MSMG5_2')\nspace_rule_1 = Implies(And(And(obj1.height < 64, obj2.height < 64), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 136))\nspace_rule_2 = Implies(And(And(obj1.width < 64, obj2.width < 64), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 136))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG5_1')\nobj2 = RectangleClass('MSMG5_2')\nsize_cond1 = And(obj1.width > 64, obj1.length > 480, obj2.width > 64, obj2.length > 480)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 92))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 92))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG5_1')\nobj2 = RectangleClass('MSMG5_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG5_1')\nobj2 = RectangleClass('MSMG5_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG5_1')\nobj2 = RectangleClass('MSMG5_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MSMG5_1')\nobj2 = RectangleClass('MSMG5_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MSMG5004",
+            "RULE_MSMG5006",
+            "RULE_MSMG5007",
+            "RULE_MSMG5008",
+            "RULE_MSMG5009",
+            "RULE_MSMG5010"
+        ],
+        "rules": [
+            "MSMG5 end-of-line spacing (end-of-line edge defined as edge < 64nm) is 136nm",
+            "Minimum spacing of MSMG5 when MSMG5 is wider than 64nm and longer than 480nm is 92nm",
+            "Minimum spacing of MSMG5 when MSMG5 is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MSMG5 when MSMG5 is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MSMG5 when MSMG5 is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MSMG5 when MSMG5 is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MG1": {
+        "constraints": [
+            "obj1 = RectangleClass('MG1_1')\nobj2 = RectangleClass('MG1_2')\nspace_rule_1 = Implies(And(And(obj1.height < 128, obj2.height < 128), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 272))\nspace_rule_2 = Implies(And(And(obj1.width < 128, obj2.width < 128), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 272))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MG1_1')\nobj2 = RectangleClass('MG1_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MG1_1')\nobj2 = RectangleClass('MG1_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MG1_1')\nobj2 = RectangleClass('MG1_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MG1_1')\nobj2 = RectangleClass('MG1_2')\nsize_cond1 = And(obj1.width > 600, obj1.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MG1004",
+            "RULE_MG1006",
+            "RULE_MG1007",
+            "RULE_MG1008",
+            "RULE_MG1009"
+        ],
+        "rules": [
+            "MG1 end-of-line spacing (end-of-line edge defined as edge < 128nm) is 272nm",
+            "Minimum spacing of MG1 when MG1 is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MG1 when MG1 is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MG1 when MG1 is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MG1 when MG1 is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    },
+    "MG2": {
+        "constraints": [
+            "obj1 = RectangleClass('MG2_1')\nobj2 = RectangleClass('MG2_2')\nspace_rule_1 = Implies(And(And(obj1.height < 128, obj2.height < 128), define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 272))\nspace_rule_2 = Implies(And(And(obj1.width < 128, obj2.width < 128), define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 272))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MG2_1')\nobj2 = RectangleClass('MG2_2')\nsize_cond1 = And(obj1.width > 120, obj1.length > 1200, obj2.width > 120, obj2.length > 1200)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 120))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 120))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MG2_1')\nobj2 = RectangleClass('MG2_2')\nsize_cond1 = And(obj1.width > 240, obj1.length > 1800, obj2.width > 240, obj2.length > 1800)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 240))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 240))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MG2_1')\nobj2 = RectangleClass('MG2_2')\nsize_cond1 = And(obj1.width > 320, obj1.length > 2400, obj2.width > 320, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 320))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 320))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)",
+            "obj1 = RectangleClass('MG2_1')\nobj2 = RectangleClass('MG2_2')\nsize_cond1 = And(obj1.width > 600, obj2.length > 2400, obj2.width > 600, obj2.length > 2400)\nspace_rule_1 = Implies(And(size_cond1, define_vertical_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_horizontal_spacing_rule(obj1, obj2, 600))\nspace_rule_2 = Implies(And(size_cond1, define_horizontal_overlap_rule(obj1, obj2), define_outside_rule(obj1.rect, obj2.rect)), define_vertical_spacing_rule(obj1, obj2, 600))\ndrc_rule_constraints = And(space_rule_1, space_rule_2)"
+        ],
+        "rule_name": [
+            "RULE_MG2004",
+            "RULE_MG2006",
+            "RULE_MG2007",
+            "RULE_MG2008",
+            "RULE_MG2009"
+        ],
+        "rules": [
+            "MG2 end-of-line spacing (end-of-line edge defined as edge < 128nm) is 272nm",
+            "Minimum spacing of MG2 when MG2 is wider than 120nm and longer than 1200nm is 120nm",
+            "Minimum spacing of MG2 when MG2 is wider than 240nm and longer than 1800nm is 240nm",
+            "Minimum spacing of MG2 when MG2 is wider than 320nm and longer than 2400nm is 320nm",
+            "Minimum spacing of MG2 when MG2 is wider than 600nm and longer than 2400nm is 600nm"
+        ]
+    }
+}

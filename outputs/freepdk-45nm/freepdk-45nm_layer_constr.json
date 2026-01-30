@@ -1,0 +1,266 @@
+{
+    "WELL": {
+        "constraints": [
+            "set_min_width(0.2*10**3)\tset_min_height(0.2*10**3)"
+        ],
+        "rule_name": [
+            "Well.4"
+        ],
+        "rules": [
+            "Min width of well = 0.2"
+        ]
+    },
+    "POLY": {
+        "constraints": [
+            "set_min_width(0.05*(10**3)) \t set_min_height(0.05*(10**3))"
+        ],
+        "rule_name": [
+            "Poly.1"
+        ],
+        "rules": [
+            "Min width of poly = 0.05"
+        ]
+    },
+    "ACTIVE": {
+        "constraints": [
+            "set_min_width(90) \t set_min_height(90)"
+        ],
+        "rule_name": [
+            "Active.1"
+        ],
+        "rules": [
+            "Minimum width of active = 0.09"
+        ]
+    },
+    "IMPLANT": {
+        "constraints": [
+            "set_min_width(45) \t set_min_height(45)"
+        ],
+        "rule_name": [
+            "Implant.4"
+        ],
+        "rules": [
+            "Minimum width of implant = 0.045"
+        ]
+    },
+    "CONTACT": {
+        "constraints": [
+            "set_min_width(0.065*10**3) \t set_min_height(0.065*10**3)"
+        ],
+        "rule_name": [
+            "Contact.1"
+        ],
+        "rules": [
+            "Minimum width of contact = 0.065"
+        ]
+    },
+    "METAL1": {
+        "constraints": [
+            "set_min_width(0.065*10**3) \t set_min_height(0.065*10**3)"
+        ],
+        "rule_name": [
+            "Metal1.1"
+        ],
+        "rules": [
+            "Minimum width of metal1 = 0.065"
+        ]
+    },
+    "VIA1": {
+        "constraints": [
+            "set_min_width(65) \t set_min_height(65)"
+        ],
+        "rule_name": [
+            "Via1.1"
+        ],
+        "rules": [
+            "Minimum width of via1 = 0.065"
+        ]
+    },
+    "METAL2": {
+        "constraints": [
+            "set_min_width(70) \t set_min_height(70)"
+        ],
+        "rule_name": [
+            "Metal2.1"
+        ],
+        "rules": [
+            "Minimum width of metal2 = 0.07"
+        ]
+    },
+    "VIA2": {
+        "constraints": [
+            "set_min_width(70) \t set_min_height(70)"
+        ],
+        "rule_name": [
+            "Via2.1"
+        ],
+        "rules": [
+            "Minimum width of via2 = 0.07"
+        ]
+    },
+    "METAL3": {
+        "constraints": [
+            "set_min_width(70) \t set_min_height(70)"
+        ],
+        "rule_name": [
+            "Metal3.1"
+        ],
+        "rules": [
+            "Minimum width of metal3 = 0.07"
+        ]
+    },
+    "VIA3": {
+        "constraints": [
+            "set_min_width(70) \t set_min_height(70)"
+        ],
+        "rule_name": [
+            "Via3.1"
+        ],
+        "rules": [
+            "Minimum width of via3 = 0.07"
+        ]
+    },
+    "METAL4": {
+        "constraints": [
+            "set_min_width(0.14*10**3)\tset_min_height(0.14*10**3)"
+        ],
+        "rule_name": [
+            "Metal4.1"
+        ],
+        "rules": [
+            "Minimum width of metal4 = 0.14"
+        ]
+    },
+    "VIA4": {
+        "constraints": [
+            "set_min_width(140) \t set_min_height(140)"
+        ],
+        "rule_name": [
+            "Via4.1"
+        ],
+        "rules": [
+            "Minimum width of via4 = 0.14"
+        ]
+    },
+    "METAL5": {
+        "constraints": [
+            "set_min_width(0.14*10**3)\t set_min_height(0.14*10**3)"
+        ],
+        "rule_name": [
+            "Metal5.1"
+        ],
+        "rules": [
+            "Minimum width of metal5 = 0.14"
+        ]
+    },
+    "VIA5": {
+        "constraints": [
+            "set_min_width(0.14*1000) \t set_min_height(0.14*1000)"
+        ],
+        "rule_name": [
+            "Via5.1"
+        ],
+        "rules": [
+            "Minimum width of via5 = 0.14"
+        ]
+    },
+    "METAL6": {
+        "constraints": [
+            "set_min_width(0.14 * (10**3))\tset_min_height(0.14 * (10**3))"
+        ],
+        "rule_name": [
+            "Metal6.1"
+        ],
+        "rules": [
+            "Minimum width of metal6 = 0.14"
+        ]
+    },
+    "VIA6": {
+        "constraints": [
+            "set_min_width(140) \t set_min_height(140)"
+        ],
+        "rule_name": [
+            "Via6.1"
+        ],
+        "rules": [
+            "Minimum width of via6 = 0.14"
+        ]
+    },
+    "METAL7": {
+        "constraints": [
+            "set_min_width(400) \t set_min_height(400)"
+        ],
+        "rule_name": [
+            "Metal7.1"
+        ],
+        "rules": [
+            "Minimum width of metal7 = 0.4"
+        ]
+    },
+    "VIA7": {
+        "constraints": [
+            "set_min_width(0.4 * (10**3)) \t set_min_height(0.4 * (10**3))"
+        ],
+        "rule_name": [
+            "Via7.1"
+        ],
+        "rules": [
+            "Minimum width of via7 = 0.4"
+        ]
+    },
+    "METAL8": {
+        "constraints": [
+            "set_min_width(0.4*(10**3)) \t set_min_height(0.4*(10**3))"
+        ],
+        "rule_name": [
+            "Metal8.1"
+        ],
+        "rules": [
+            "Minimum width of metal8 = 0.4"
+        ]
+    },
+    "VIA8": {
+        "constraints": [
+            "set_min_width(0.4*(10**3))  \tset_min_height(0.4*(10**3))"
+        ],
+        "rule_name": [
+            "Via8.1"
+        ],
+        "rules": [
+            "Minimum width of via8 = 0.4"
+        ]
+    },
+    "METAL9": {
+        "constraints": [
+            "set_min_width(0.8*(10**3)) \t set_min_height(0.8*(10**3))"
+        ],
+        "rule_name": [
+            "Metal9.1"
+        ],
+        "rules": [
+            "Minimum width of metal9 = 0.8"
+        ]
+    },
+    "VIA9": {
+        "constraints": [
+            "set_min_width(800) \t set_min_height(800)"
+        ],
+        "rule_name": [
+            "Via9.1"
+        ],
+        "rules": [
+            "Minimum width of via9 = 0.8"
+        ]
+    },
+    "METAL10": {
+        "constraints": [
+            "set_min_width(0.8*10**3)\tset_min_height(0.8*10**3)"
+        ],
+        "rule_name": [
+            "Metal10.1"
+        ],
+        "rules": [
+            "Minimum width of metal10 = 0.8"
+        ]
+    }
+}

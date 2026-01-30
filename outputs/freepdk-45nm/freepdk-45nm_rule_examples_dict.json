@@ -1,0 +1,1202 @@
+{
+    "Well.4": {
+        "examples": [
+            {
+                "WELL": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 200,
+                        "ury": 200
+                    }
+                ]
+            },
+            {
+                "WELL": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 199,
+                        "ury": 200
+                    }
+                ]
+            },
+            {
+                "WELL": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 200,
+                        "ury": 199
+                    }
+                ]
+            },
+            {
+                "WELL": [
+                    {
+                        "llx": 2660,
+                        "lly": 2660,
+                        "urx": 2859,
+                        "ury": 2859
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Poly.1": {
+        "examples": [
+            {
+                "POLY": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 50,
+                        "ury": 50
+                    }
+                ]
+            },
+            {
+                "POLY": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 50,
+                        "ury": 49
+                    }
+                ]
+            },
+            {
+                "POLY": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 49,
+                        "ury": 50
+                    }
+                ]
+            },
+            {
+                "POLY": [
+                    {
+                        "llx": 3023,
+                        "lly": 3023,
+                        "urx": 3072,
+                        "ury": 3072
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Active.1": {
+        "examples": [
+            {
+                "ACTIVE": [
+                    {
+                        "llx": 0,
+                        "lly": 2808,
+                        "urx": 90,
+                        "ury": 2898
+                    }
+                ]
+            },
+            {
+                "ACTIVE": [
+                    {
+                        "llx": 0,
+                        "lly": 1346,
+                        "urx": 90,
+                        "ury": 1435
+                    }
+                ]
+            },
+            {
+                "ACTIVE": [
+                    {
+                        "llx": 0,
+                        "lly": 1967,
+                        "urx": 89,
+                        "ury": 2057
+                    }
+                ]
+            },
+            {
+                "ACTIVE": [
+                    {
+                        "llx": 0,
+                        "lly": 1185,
+                        "urx": 89,
+                        "ury": 1274
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Implant.4": {
+        "examples": [
+            {
+                "IMPLANT": [
+                    {
+                        "llx": 0,
+                        "lly": 1414,
+                        "urx": 45,
+                        "ury": 1459
+                    }
+                ]
+            },
+            {
+                "IMPLANT": [
+                    {
+                        "llx": 0,
+                        "lly": 1121,
+                        "urx": 45,
+                        "ury": 1165
+                    }
+                ]
+            },
+            {
+                "IMPLANT": [
+                    {
+                        "llx": 0,
+                        "lly": 1922,
+                        "urx": 44,
+                        "ury": 1967
+                    }
+                ]
+            },
+            {
+                "IMPLANT": [
+                    {
+                        "llx": 0,
+                        "lly": 1500,
+                        "urx": 44,
+                        "ury": 1544
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Contact.1": {
+        "examples": [
+            {
+                "CONTACT": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 65,
+                        "ury": 65
+                    }
+                ]
+            },
+            {
+                "CONTACT": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 64,
+                        "ury": 65
+                    }
+                ]
+            },
+            {
+                "CONTACT": [
+                    {
+                        "llx": 2,
+                        "lly": 2,
+                        "urx": 67,
+                        "ury": 66
+                    }
+                ]
+            },
+            {
+                "CONTACT": [
+                    {
+                        "llx": 2243,
+                        "lly": 2243,
+                        "urx": 2307,
+                        "ury": 2307
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal1.1": {
+        "examples": [
+            {
+                "METAL1": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 65,
+                        "ury": 65
+                    }
+                ]
+            },
+            {
+                "METAL1": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 64,
+                        "ury": 65
+                    }
+                ]
+            },
+            {
+                "METAL1": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 65,
+                        "ury": 64
+                    }
+                ]
+            },
+            {
+                "METAL1": [
+                    {
+                        "llx": 2243,
+                        "lly": 2243,
+                        "urx": 2307,
+                        "ury": 2307
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Via1.1": {
+        "examples": [
+            {
+                "VIA1": [
+                    {
+                        "llx": 0,
+                        "lly": 2783,
+                        "urx": 65,
+                        "ury": 2848
+                    }
+                ]
+            },
+            {
+                "VIA1": [
+                    {
+                        "llx": 0,
+                        "lly": 1226,
+                        "urx": 64,
+                        "ury": 1291
+                    }
+                ]
+            },
+            {
+                "VIA1": [
+                    {
+                        "llx": 0,
+                        "lly": 1941,
+                        "urx": 65,
+                        "ury": 2005
+                    }
+                ]
+            },
+            {
+                "VIA1": [
+                    {
+                        "llx": 0,
+                        "lly": 1110,
+                        "urx": 64,
+                        "ury": 1174
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal2.1": {
+        "examples": [
+            {
+                "METAL2": [
+                    {
+                        "llx": 0,
+                        "lly": 1514,
+                        "urx": 70,
+                        "ury": 1584
+                    }
+                ]
+            },
+            {
+                "METAL2": [
+                    {
+                        "llx": 0,
+                        "lly": 1246,
+                        "urx": 70,
+                        "ury": 1315
+                    }
+                ]
+            },
+            {
+                "METAL2": [
+                    {
+                        "llx": 0,
+                        "lly": 1947,
+                        "urx": 69,
+                        "ury": 2017
+                    }
+                ]
+            },
+            {
+                "METAL2": [
+                    {
+                        "llx": 0,
+                        "lly": 1625,
+                        "urx": 69,
+                        "ury": 1694
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Via2.1": {
+        "examples": [
+            {
+                "VIA2": [
+                    {
+                        "llx": 0,
+                        "lly": 2788,
+                        "urx": 70,
+                        "ury": 2858
+                    }
+                ]
+            },
+            {
+                "VIA2": [
+                    {
+                        "llx": 0,
+                        "lly": 1251,
+                        "urx": 69,
+                        "ury": 1321
+                    }
+                ]
+            },
+            {
+                "VIA2": [
+                    {
+                        "llx": 0,
+                        "lly": 1946,
+                        "urx": 70,
+                        "ury": 2015
+                    }
+                ]
+            },
+            {
+                "VIA2": [
+                    {
+                        "llx": 0,
+                        "lly": 1125,
+                        "urx": 69,
+                        "ury": 1194
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal3.1": {
+        "examples": [
+            {
+                "METAL3": [
+                    {
+                        "llx": 0,
+                        "lly": 2788,
+                        "urx": 70,
+                        "ury": 2858
+                    }
+                ]
+            },
+            {
+                "METAL3": [
+                    {
+                        "llx": 0,
+                        "lly": 1246,
+                        "urx": 70,
+                        "ury": 1315
+                    }
+                ]
+            },
+            {
+                "METAL3": [
+                    {
+                        "llx": 0,
+                        "lly": 1947,
+                        "urx": 69,
+                        "ury": 2017
+                    }
+                ]
+            },
+            {
+                "METAL3": [
+                    {
+                        "llx": 0,
+                        "lly": 1125,
+                        "urx": 69,
+                        "ury": 1194
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Via3.1": {
+        "examples": [
+            {
+                "VIA3": [
+                    {
+                        "llx": 0,
+                        "lly": 2788,
+                        "urx": 70,
+                        "ury": 2858
+                    }
+                ]
+            },
+            {
+                "VIA3": [
+                    {
+                        "llx": 0,
+                        "lly": 1246,
+                        "urx": 70,
+                        "ury": 1315
+                    }
+                ]
+            },
+            {
+                "VIA3": [
+                    {
+                        "llx": 0,
+                        "lly": 1947,
+                        "urx": 69,
+                        "ury": 2017
+                    }
+                ]
+            },
+            {
+                "VIA3": [
+                    {
+                        "llx": 0,
+                        "lly": 1125,
+                        "urx": 69,
+                        "ury": 1194
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal4.1": {
+        "examples": [
+            {
+                "METAL4": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 140,
+                        "ury": 140
+                    }
+                ]
+            },
+            {
+                "METAL4": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 140,
+                        "ury": 139
+                    }
+                ]
+            },
+            {
+                "METAL4": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 139,
+                        "ury": 140
+                    }
+                ]
+            },
+            {
+                "METAL4": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 139,
+                        "ury": 139
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Via4.1": {
+        "examples": [
+            {
+                "VIA4": [
+                    {
+                        "llx": 0,
+                        "lly": 1794,
+                        "urx": 140,
+                        "ury": 1934
+                    }
+                ]
+            },
+            {
+                "VIA4": [
+                    {
+                        "llx": 0,
+                        "lly": 1601,
+                        "urx": 139,
+                        "ury": 1741
+                    }
+                ]
+            },
+            {
+                "VIA4": [
+                    {
+                        "llx": 0,
+                        "lly": 2016,
+                        "urx": 140,
+                        "ury": 2155
+                    }
+                ]
+            },
+            {
+                "VIA4": [
+                    {
+                        "llx": 0,
+                        "lly": 1975,
+                        "urx": 139,
+                        "ury": 2114
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal5.1": {
+        "examples": [
+            {
+                "METAL5": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 140,
+                        "ury": 140
+                    }
+                ]
+            },
+            {
+                "METAL5": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 139,
+                        "ury": 140
+                    }
+                ]
+            },
+            {
+                "METAL5": [
+                    {
+                        "llx": 2,
+                        "lly": 2,
+                        "urx": 142,
+                        "ury": 141
+                    }
+                ]
+            },
+            {
+                "METAL5": [
+                    {
+                        "llx": 2618,
+                        "lly": 2618,
+                        "urx": 2757,
+                        "ury": 2757
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Via5.1": {
+        "examples": [
+            {
+                "VIA5": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 140,
+                        "ury": 140
+                    }
+                ]
+            },
+            {
+                "VIA5": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 140,
+                        "ury": 139
+                    }
+                ]
+            },
+            {
+                "VIA5": [
+                    {
+                        "llx": 2,
+                        "lly": 2,
+                        "urx": 141,
+                        "ury": 142
+                    }
+                ]
+            },
+            {
+                "VIA5": [
+                    {
+                        "llx": 3023,
+                        "lly": 3023,
+                        "urx": 3162,
+                        "ury": 3162
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal6.1": {
+        "examples": [
+            {
+                "METAL6": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 140,
+                        "ury": 140
+                    }
+                ]
+            },
+            {
+                "METAL6": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 140,
+                        "ury": 139
+                    }
+                ]
+            },
+            {
+                "METAL6": [
+                    {
+                        "llx": 2,
+                        "lly": 2,
+                        "urx": 141,
+                        "ury": 142
+                    }
+                ]
+            },
+            {
+                "METAL6": [
+                    {
+                        "llx": 3023,
+                        "lly": 3023,
+                        "urx": 3162,
+                        "ury": 3162
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Via6.1": {
+        "examples": [
+            {
+                "VIA6": [
+                    {
+                        "llx": 0,
+                        "lly": 2858,
+                        "urx": 140,
+                        "ury": 2998
+                    }
+                ]
+            },
+            {
+                "VIA6": [
+                    {
+                        "llx": 0,
+                        "lly": 1601,
+                        "urx": 139,
+                        "ury": 1741
+                    }
+                ]
+            },
+            {
+                "VIA6": [
+                    {
+                        "llx": 0,
+                        "lly": 2016,
+                        "urx": 140,
+                        "ury": 2155
+                    }
+                ]
+            },
+            {
+                "VIA6": [
+                    {
+                        "llx": 0,
+                        "lly": 1335,
+                        "urx": 139,
+                        "ury": 1474
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal7.1": {
+        "examples": [
+            {
+                "METAL7": [
+                    {
+                        "llx": 0,
+                        "lly": 2834,
+                        "urx": 400,
+                        "ury": 3234
+                    }
+                ]
+            },
+            {
+                "METAL7": [
+                    {
+                        "llx": 0,
+                        "lly": 2901,
+                        "urx": 399,
+                        "ury": 3301
+                    }
+                ]
+            },
+            {
+                "METAL7": [
+                    {
+                        "llx": 0,
+                        "lly": 2276,
+                        "urx": 400,
+                        "ury": 2675
+                    }
+                ]
+            },
+            {
+                "METAL7": [
+                    {
+                        "llx": 0,
+                        "lly": 3275,
+                        "urx": 399,
+                        "ury": 3674
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Via7.1": {
+        "examples": [
+            {
+                "VIA7": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 400,
+                        "ury": 400
+                    }
+                ]
+            },
+            {
+                "VIA7": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 399,
+                        "ury": 400
+                    }
+                ]
+            },
+            {
+                "VIA7": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 400,
+                        "ury": 399
+                    }
+                ]
+            },
+            {
+                "VIA7": [
+                    {
+                        "llx": 3260,
+                        "lly": 3260,
+                        "urx": 3659,
+                        "ury": 3659
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal8.1": {
+        "examples": [
+            {
+                "METAL8": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 400,
+                        "ury": 400
+                    }
+                ]
+            },
+            {
+                "METAL8": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 399,
+                        "ury": 400
+                    }
+                ]
+            },
+            {
+                "METAL8": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 400,
+                        "ury": 399
+                    }
+                ]
+            },
+            {
+                "METAL8": [
+                    {
+                        "llx": 3260,
+                        "lly": 3260,
+                        "urx": 3659,
+                        "ury": 3659
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Via8.1": {
+        "examples": [
+            {
+                "VIA8": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 400,
+                        "ury": 400
+                    }
+                ]
+            },
+            {
+                "VIA8": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 399,
+                        "ury": 400
+                    }
+                ]
+            },
+            {
+                "VIA8": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 400,
+                        "ury": 399
+                    }
+                ]
+            },
+            {
+                "VIA8": [
+                    {
+                        "llx": 3260,
+                        "lly": 3260,
+                        "urx": 3659,
+                        "ury": 3659
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal9.1": {
+        "examples": [
+            {
+                "METAL9": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 800,
+                        "ury": 800
+                    }
+                ]
+            },
+            {
+                "METAL9": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 799,
+                        "ury": 800
+                    }
+                ]
+            },
+            {
+                "METAL9": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 800,
+                        "ury": 799
+                    }
+                ]
+            },
+            {
+                "METAL9": [
+                    {
+                        "llx": 1716,
+                        "lly": 1716,
+                        "urx": 2515,
+                        "ury": 2515
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Via9.1": {
+        "examples": [
+            {
+                "VIA9": [
+                    {
+                        "llx": 0,
+                        "lly": 233,
+                        "urx": 800,
+                        "ury": 1033
+                    }
+                ]
+            },
+            {
+                "VIA9": [
+                    {
+                        "llx": 0,
+                        "lly": 694,
+                        "urx": 800,
+                        "ury": 1493
+                    }
+                ]
+            },
+            {
+                "VIA9": [
+                    {
+                        "llx": 0,
+                        "lly": 2677,
+                        "urx": 799,
+                        "ury": 3477
+                    }
+                ]
+            },
+            {
+                "VIA9": [
+                    {
+                        "llx": 0,
+                        "lly": 1073,
+                        "urx": 799,
+                        "ury": 1872
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "Metal10.1": {
+        "examples": [
+            {
+                "METAL10": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 800,
+                        "ury": 800
+                    }
+                ]
+            },
+            {
+                "METAL10": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 799,
+                        "ury": 800
+                    }
+                ]
+            },
+            {
+                "METAL10": [
+                    {
+                        "llx": 0,
+                        "lly": 0,
+                        "urx": 800,
+                        "ury": 799
+                    }
+                ]
+            },
+            {
+                "METAL10": [
+                    {
+                        "llx": 258,
+                        "lly": 258,
+                        "urx": 1057,
+                        "ury": 1057
+                    }
+                ]
+            }
+        ],
+        "labels": [
+            true,
+            false,
+            false,
+            false
+        ]
+    }
+}
