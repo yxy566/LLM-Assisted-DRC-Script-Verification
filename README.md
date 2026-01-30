@@ -5,6 +5,7 @@ This repository hosts the datasets and experimental outputs used in the accompan
 ## Data Contents
 - `datasets/freepdk-45nm/`: curated ROIs, layout annotations, and metadata for the FreePDK 45nm process, structured for downstream language-model-based rule extraction.
 - `datasets/freePDK15/`: the equivalent dataset formatted for the FreePDK15 process node, keeping the same conventions as the 45nm folder for consistency.
+- `datasets/asap7/`: used with permission; the actual ASAP7 data is copyright-protected and must be downloaded separately via the link provided in that directory's `readme.md`.
 
 ## Experimental Outputs
 - `outputs/freepdk-45nm/` and `outputs/freePDK15/`: each process directory contains rule examples (`.rul`), pointers to the matched GDS files, GPT-generated textual renditions (`*_gpt_output_shape_rules.json`), and derived spatial constraint summaries.
